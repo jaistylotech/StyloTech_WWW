@@ -1,0 +1,99 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>{% block title %}StyloTech - Stylopedia Technology PVT.LTD{% endblock %}</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    {% comment %} <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}"> {% endcomment %}
+    {% comment %} <meta name="theme-color" content="#ed2424"> {% endcomment %}
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/flaticon.css' %}">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/magnific-popup.css' %}">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+    <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/vendor/plugins.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.min.css' %}"> -->
+
+</head>
+
+<body class="{% if request.path == '/privacy/' or request.path == '/terms/' %}no-copy{% endif %}">>
+
+    <div class="main-wrapper">
+
+
+        <!-- Preloader start -->
+        <div id="preloader">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- Preloader End -->
+
+      
+          {% include 'website/header.html' %}
+  
+          {% block content %}
+
+          
+          {% endblock %}
+  
+          {% include 'website/footer.html' %}
+
+        </div>
+
+    
+  
+
+
+    <!-- JS
+    ============================================ -->
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.11.2.min.js' %} "></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/js/plugins/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins JS -->
+    <script src="{% static 'assets/js/plugins/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/aos.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/back-to-top.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/appear.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.magnific-popup.min.js' %}"></script>
+
+
+    <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+
+
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  
+
+</>
+
+</html>

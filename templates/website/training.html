@@ -1,0 +1,101 @@
+{% extends "website/base.html" %}
+
+{% load static %}
+ 
+{% block title %}
+StyloTech - Training-Page
+{% endblock %}
+
+{% block content %}    
+
+
+
+<div class="section techwix-hero-section-05"  style="padding:0px;  margin:0px;">
+      <div class="techwix-hero-wrap" style="background-image: url({% static 'assets/images/training/training_bg.jpg' %}); ">
+         <div class="container" >
+          <h1 style= "color:#fff; text-align: center; margin-top:50px;" >Training</h1>
+         </div>
+       
+
+      </div>
+         
+
+
+<section class="training-section">
+
+    <!-- ROW 1 -->
+    <div class="card-row">
+        <!-- CARD 1 -->
+        <div class="custom-card">
+            <div class="card-img">
+                <img src="{% static 'assets/images/training/training_img_1.png' %}" alt="">
+            </div>
+            <div class="card-content">
+                <h3>CDR ANALYSIS</h3>
+                <p>CDR Analysis (Call Detail Record Analysis) is the process of examining phone call and SMS records to understand communication between individuals.</p>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="custom-card">
+            <div class="card-img">
+                <img src="{% static 'assets/images/training/training_img_2.png' %}" alt="">
+            </div>
+            <div class="card-content">
+                <h3>IPDR ANALYSIS</h3>
+                <p>An IPDR (Internet Protocol Detail Record) is a comprehensive log file created by an ISP that records all internet activity.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="card-row center">
+        <!-- CARD 3 -->
+        <div class="custom-card">
+            <div class="card-img">
+                <img src="{% static 'assets/images/training/training_img_3.png' %}" alt="">
+            </div>
+            <div class="card-content">
+                <h3>UFED DATA RECOVERY TOOL</h3>
+                <p>The UFED (Universal Forensic Extraction Device) is a digital forensics tool used to extract and analyze mobile data.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Cta Start -->
+<div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
+    <div class="container">
+        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});  padding: 80px 40px;
+                   border-radius: 15px;">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <!-- Cta Left Start -->
+                    <div class="cta-left">
+                        <div class="section-title">
+                            <h2 class="title white" style ="font-size:30px;">To make requests for further information, connect us </h2>
+                        </div>
+                    </div>
+                    <!-- Cta Left End -->
+                </div>
+                <div class="col-lg-5">
+                    <!-- Cta Right Start -->
+                    <div class="cta-info text-center">
+                        <div class="cta-icon">
+                            <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
+                        </div>
+                        <div class="cta-text">
+                            <p>Call Us For Any Enquiry</p>
+                            <h3 class="number"> +91 7507575166</h3>
+                        </div>
+                    </div>
+                    <!-- Cta Right End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
