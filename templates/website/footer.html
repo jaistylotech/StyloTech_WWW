@@ -3,50 +3,74 @@
 
 <!-- Footer Section Start -->
 <div class="section footer-section footer-section-03"
-     style="background-image: url({% static 'assets/images/bg/footer-bg.jpg' %});">
+     style="background-image: url({% static 'assets/images/bg/footer_bg6.jpg' %}); position: relative; overflow: hidden;">
+       <div class="binary-bg" id="binaryBg"></div>
 
-    <div class="container" style="max-width: 1200px;">
-
+    <div class="container-fluid" >
+          <div id="tsparticles-footer"></div>
         <!-- Footer Widget Wrap Start -->
         <div class="footer-widget-wrap">
-            <div class="row">
+            <div class="row align-items-start justify-content-between">
 
                 <!-- About -->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget-about">
+                <div class="col-lg-3 col-md-6">
+    <div class="footer-widget-about">
 
-                        <a class="footer-logo" href="{% url 'home' %}"  >
-                            <img src="{% static 'assets/images/about/logo.png' %}" alt="Logo" >
-                        </a>
-                         
-                       
+        {% comment %} <div class="footer-logo-box">
+            <a class="footer-logo" href="{% url 'home' %}">
+                <img src="{% static 'assets/images/logo.svg' %}" alt="Logo">
+                <span class="logo-text">StyloTech</span>
+            </a>
+        </div> {% endcomment %}
 
-                        <div class="footer-social">
-                            <ul class="social">
-                                <li>
-                                    <a href="https://www.instagram.com/stylotech.official?igsh=b2Q1MGk3empmOGhz">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/stylopedia-technology-pvt-ltd/">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
+        <div class="footer-logo-box">
+    <span class="footer-logo">
+        <img src="{% static 'assets/images/about/logo_final.png' %}" alt="Logo">
+         {% comment %} <span class="logo-text">StyloTech</span> {% endcomment %}
+    </span>
+</div>
 
-                                 <li><a href="https://wa.me/917507575166?"  target="_blank"><i class="fab fa-whatsapp"></i>
-                                 </a>
-                                </li>
-                                 <li><a href="https://discord.gg/wP3utWyg6j"><i class="fab fa-discord"></i></a></li>
-                                </li>
-                            </ul>
-                        </div>
+        <div class="footer-social">
+            <ul class="social">
+                <li>
+                    <a href="https://www.instagram.com/stylotech.official?igsh=b2Q1MGk3empmOGhz" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/stylopedia-technology-pvt-ltd/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/918668431882?" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/CHv7jdMC75" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
 
-                    </div>
-                </div>
+                
+                  <li>
+                    <a href="https://www.youtube.com/channel/UCf0onMVETiM536HeLIxPHxg" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
 
+
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+                
                     <!-- About Links (NEW) -->
-                <div class="col-lg-3 col-sm-6">
-                     <div class="footer-widget">
+                <div class="col-lg-2 col-md-6 ps-lg-5">
+                     <div class="footer-widget footer-align-left" >
 
                          <h4 class="footer-widget-title">Links</h4>
 
@@ -55,7 +79,7 @@
                                 <li><a href="{% url 'about' %}">About Us</a></li>
                                 <li><a href="{% url 'certifications' %}">Certifications </a></li>
                                  <li><a href="{% url 'training' %}"> Training </a></li>
-                                  <li><a href="{% url 'contact'  %}">Connect</a></li>
+                                  <li><a href="{% url 'connect'  %}">Connect</a></li>
                             </ul>
                          </div>
 
@@ -64,8 +88,8 @@
                 
 
                 <!-- Product -->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget" style ="padding-right:100px;">
+                <div class="col-lg-3 col-md-6 ps-lg-5">
+                    <div class="footer-widget footer-align-left-1">
 
                         <h4 class="footer-widget-title">Product</h4>
 
@@ -78,12 +102,12 @@
                                 </li>
                                 <li>
                                     <a href="{% url 'product_detail' 'attendance' %}">
-                                        Attendance Management System
+                                        Attendance Management System (AMS)
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{% url 'product_detail' 'cms' %}">
-                                        Club Management System
+                                        Club Management System (CMS)
                                     </a>
                                 </li>
                             </ul>
@@ -93,10 +117,10 @@
                 </div>
 
                 <!-- Contact -->
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
 
-                        <h4 class="footer-widget-title">Contact Information</h4>
+                        <h4 class="footer-widget-title">Connect Us</h4>
 
                         <div class="widget-info">
                             <ul>
@@ -107,7 +131,7 @@
                                     </div>
                                     <div class="info-text">
                                         <span>
-                                            <a href="tel:+91 75075 75166">+91 75075 75166</a>
+                                            <a href="tel:+91 9665165103">+91 8668431882</a>
                                         </span>
                                     </div>
                                 </li>
@@ -140,9 +164,8 @@
                                     </div>
                                     <div class="info-text">
                                         <span>
-                                            <a href="#">
-                                                F1 & F3, SAWKAR LAXMI PLAZA, SHETE CHOWK,
-                                                GURUWAR PETH, SATARA - 415003; (MHA), INDIA.
+                                            <a href="https://www.google.com/maps?q=18.52458010944136, 73.85534372379898" target="_blank" style ="text-align: justify; font-size: 11px;">
+                                                Office No.505, 5th Floor, Amit Court Apartment, Amit Cafe, Near Shivaji Nagar District Court, Pune – 411005 (MAH), India.
                                             </a>
                                         </span>
                                     </div>
@@ -169,7 +192,7 @@
                     <!-- Left -->
                     <div class="col-md-4 mb-2 mb-md-0">
                         <div class="copyright-text">
-                            <p>© Copyright 2026, Stylopedia Technology Pvt. Ltd</p>
+                            <p>© Copyright 2026, Stylopedia Technology Pvt. Ltd.</p>
                         </div>
                     </div>
 
@@ -186,7 +209,7 @@
                     <!-- Right -->
                     <div class="col-md-4 text-md-end">
                         <div class="copyright-text">
-                            <p>Designed & Developed By : <span style = color:#ed2424;>StyloTech</span></p>
+                            <p>Designed & Developed By :<a href="{% url 'home' %}" style = "color :#ed2424;">StyloTech</a></p>
                         </div>
                     </div>
 

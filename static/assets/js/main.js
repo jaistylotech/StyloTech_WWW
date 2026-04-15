@@ -215,23 +215,71 @@
 
   
 /*--js add by me */
- document.addEventListener("DOMContentLoaded", function () {
+//  document.addEventListener("DOMContentLoaded", function () {
 
-     const scrollBox = document.querySelector(".scroll-services");
+//      const scrollBox = document.querySelector(".scroll-services");
 
-    let scrollSpeed = 1;
+//     let scrollSpeed = 1;
 
-    function autoScroll() {
-        scrollBox.scrollTop += scrollSpeed;
+//     function autoScroll() {
+//         scrollBox.scrollTop += scrollSpeed;
 
-        if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight) {
-            scrollBox.scrollTop = 0;
-        }
+//         if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight) {
+//             scrollBox.scrollTop = 0;
+//         }
+//     }
+
+//     setInterval(autoScroll, 60);
+
+// });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollBox = document.querySelector(".scroll-services");
+
+    // Step 1: wrapper banao
+    const content = document.createElement("div");
+    content.classList.add("scroll-inner");
+
+    // existing content ko wrap karo
+    while (scrollBox.firstChild) {
+        content.appendChild(scrollBox.firstChild);
     }
 
-    setInterval(autoScroll, 60);
+    // clone banao
+    const clone = content.cloneNode(true);
+
+    scrollBox.appendChild(content);
+    scrollBox.appendChild(clone);
+
+    let speed = 0.5;
+    let isPaused = false;
+
+    function autoScroll() {
+
+        if (!isPaused) {
+            scrollBox.scrollTop += speed;
+
+            // exact height pe reset (no mismatch)
+            if (scrollBox.scrollTop >= content.offsetHeight) {
+                scrollBox.scrollTop = 0;
+            }
+        }
+
+        requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();
+
+    // hover pause
+    scrollBox.addEventListener("mouseenter", () => isPaused = true);
+    scrollBox.addEventListener("mouseleave", () => isPaused = false);
 
 });
+
+
+
 
 
 
@@ -447,4 +495,222 @@ function closeVideo() {
 
 
 
+ const container = document.getElementById("binaryBg");
 
+setInterval(() => {
+    const span = document.createElement("span");
+    span.className = "binary";
+    span.innerText = Math.random() > 0.5 ? "1" : "0";
+
+    span.style.left = Math.random() * 100 + "%";
+    span.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    container.appendChild(span);
+
+    setTimeout(() => {
+        span.remove();
+    }, 6000);
+}, 120);   
+
+
+tsParticles.load("tsparticles-footer", {
+  fullScreen: { enable: false },
+
+  particles: {
+    number: {
+      value: 40,
+      density: { enable: true, area: 800 }
+    },
+
+    color: {
+      value: "#ed2424"
+    },
+
+    links: {
+      enable: true,
+      distance: 120,
+      color: "#00f0ff",
+      opacity: 0.3,
+      width: 1
+    },
+
+    move: {
+      enable: true,
+      speed: 1,
+      outModes: { default: "bounce" }
+    },
+
+    size: {
+      value: { min: 1, max: 3 }
+    },
+
+    opacity: {
+      value: 0.4
+    }
+  },
+
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "grab"
+      }
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        links: { opacity: 0.6 }
+      }
+    }
+  }
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  let index = 0;
+  const track = document.getElementById("droneTrack");
+  const images = document.querySelectorAll("#droneTrack img");
+  const total = images.length;
+
+  const next = document.querySelector(".drone-next");
+  const prev = document.querySelector(".drone-prev");
+
+  function slide() {
+    track.style.transition = "transform 0.6s ease-in-out";
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  next.addEventListener("click", () => {
+    index++;
+    slide();
+
+    if (index === total - 1) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = "translateX(0)";
+      }, 600);
+    }
+  });
+
+  prev.addEventListener("click", () => {
+    if (index === 0) {
+      track.style.transition = "none";
+      index = total - 1;
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      setTimeout(() => {
+        index--;
+        slide();
+      }, 50);
+    } else {
+      index--;
+      slide();
+    }
+  });
+
+  // AUTO SLIDE
+  setInterval(() => {
+    index++;
+    slide();
+
+    if (index === total - 1) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = "translateX(0)";
+      }, 600);
+    }
+  }, 2500);
+
+});
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  let index = 0;
+  const track = document.getElementById("defenceTrack");
+  const images = document.querySelectorAll("#defenceTrack img");
+  const total = images.length;
+
+  const next = document.querySelector(".defence-next");
+  const prev = document.querySelector(".defence-prev");
+
+  function slide() {
+    track.style.transition = "transform 0.6s ease-in-out";
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  next.addEventListener("click", () => {
+    index++;
+    slide();
+
+    if (index === total - 1) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = "translateX(0)";
+      }, 600);
+    }
+  });
+
+  prev.addEventListener("click", () => {
+    if (index === 0) {
+      track.style.transition = "none";
+      index = total - 1;
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      setTimeout(() => {
+        index--;
+        slide();
+      }, 50);
+    } else {
+      index--;
+      slide();
+    }
+  });
+
+  // AUTO SLIDE
+  setInterval(() => {
+    index++;
+    slide();
+
+    if (index === total - 1) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = "translateX(0)";
+      }, 600);
+    }
+  }, 2500);
+
+});
+
+
+
+const cards = document.querySelectorAll(".info-card");
+let index = 0;
+
+setInterval(() => {
+
+    cards[index].classList.remove("active");
+    cards[index].classList.add("prev");
+
+    index = (index + 1) % cards.length;
+
+    cards[index].classList.add("active");
+
+    setTimeout(() => {
+        cards.forEach(card => card.classList.remove("prev"));
+    }, 500);
+
+}, 2000);

@@ -1,0 +1,173 @@
+
+
+{% extends 'website/base.html' %}
+
+{% load static %}
+
+{% block title %}
+StyloTech - Home Page
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="rnd-hero-section">
+    <div class="rnd-hero-wrap">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-delay="800">
+                Research & Development
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<section class="drone-bms-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6 col-md-12">
+        <div class="drone-content-box">
+          <h2>Drone Battery Management System (BMS)</h2>
+
+          <p>
+            A Drone Battery Management System (BMS) is a device that helps monitor and protect the battery used in drones. It keeps track of important things like voltage, current, and temperature to make sure the battery is working safely and efficiently.
+          </p> </br>
+
+          <p>
+           The system can detect problems early, such as overheating or faults, and helps prevent damage to the battery and the drone. It is designed for high-capacity lithium batteries and supports battery packs from 6S to 14S.
+          </p></br>
+
+          <p>
+            This BMS is built to work reliably even in harsh or extreme environments, making it suitable for UAVs and drones used in demanding conditions
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT SLIDER -->
+      <div class="col-lg-6 col-md-12">
+        <div class="drone-slider">
+          <div class="drone-slides" id="droneTrack">
+
+            <img src="{% static 'assets/images/bms/drone_img_1.png' %}">
+            <img src="{% static 'assets/images/bms/drone_img_2.png' %}">
+            <img src="{% static 'assets/images/bms/bms1.jpg' %}">
+
+            <!-- CLONE -->
+            <img src="{% static 'assets/images/bms/drone_img_1.png' %}">
+          </div>
+
+          <button class="drone-prev">&#10094;</button>
+          <button class="drone-next">&#10095;</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="defence-bms-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6 col-md-12">
+        <div class="defence-content-box">
+          <h2>Defence Battery Management System (BMS)</h2>
+
+          <p>
+            The Defence BMS System is a high-reliability battery management solution
+            designed for 3S lithium battery packs operating between 7.5V and 12.6V
+            in harsh and mission-critical environments.
+          </p><br>
+
+          <p>
+            It provides protection against over-voltage, under-voltage, overcurrent,
+            short circuits, and thermal faults while ensuring safe operation.
+          </p><br>
+
+          <p>
+            Supports UART/isoUART communication for real-time monitoring and
+            seamless system integration with rugged EMI/EMC protection.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT SLIDER -->
+      <div class="col-lg-6 col-md-12">
+        <div class="defence-slider">
+          <div class="defence-slides" id="defenceTrack">
+
+            <img src="{% static 'assets/images/bms/defence_img_1.png' %}">
+            <img src="{% static 'assets/images/bms/defence_img_2.png' %}">
+            {% comment %} <img src="{% static 'assets/images/bms/bms3.jpg' %}"> {% endcomment %}
+
+            <!-- CLONE -->
+            <img src="{% static 'assets/images/bms/defence_img_1.png' %}">
+          </div>
+
+          <!-- BUTTONS -->
+          <button class="defence-prev">&#10094;</button>
+          <button class="defence-next">&#10095;</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
+    <div class="container">
+        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});  padding: 48px 64px;
+                   border-radius: 15px; margin : -100px -18px; margin-top:20px;">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <!-- Cta Left Start -->
+                    <div class="cta-left">
+                        <div class="section-title">
+
+                            <!-- 🔥 BUTTON ADDED HERE -->
+                            <a href="https://wa.me/8668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank" class="cta-btn">
+                                Connect Us <i class="fas fa-paper-plane"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Cta Left End -->
+                </div>
+                <div class="col-lg-5">
+                    <!-- Cta Right Start -->
+                    <div class="cta-info text-center">
+                        <div class="cta-icon">
+                            <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
+                        </div>
+                        <div class="cta-text">
+                            {% comment %} <p>For Official Consultations and Inquiries</p> {% endcomment %}
+                            <h3 class="number" style ="color:#00FFF0"> +91 8668431882</h3>
+                        </div>
+                    </div>
+                    <!-- Cta Right End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

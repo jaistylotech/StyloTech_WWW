@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-StyloTech - Contact-Page
+StyloTech - Connect-Page
 {% endblock %}
 
 {% block content %}
@@ -11,43 +11,98 @@ StyloTech - Contact-Page
 
 
 
+<div class="connect-hero-section">
+    <div class="connect-hero-wrap">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-delay="800">CONNECT US</h1>
+        </div>
+    </div>
+</div>
+
+
 
 
 <!-- Contact Section Start -->
 <!-- Contact Section Start -->
-<div class="contact-section">
+
+
+<div class="contact-mid-section" >
     <div class="container">
 
-        <div class="contact-card">
-            <div class="row align-items-center justify-content-between text-center text-md-start">
+        <div class="contact-mid-wrapper">
 
-                <!-- Title -->
-                <div class="col-12">
-                    <h2 class="contact-title-expert">
-                        Get Expert Consultation
-                    </h2>
-                </div>
+            <!-- LEFT CONTENT -->
+            <div class="contact-mid-left">
 
-                <!-- Left Content -->
-                <div class="col-lg-8 col-md-8 col-12">
-                    <p class="contact-text-expert">
-                        Speak with our experts to receive reliable, professional guidance and tailored solutions
-                        designed to protect and drive the growth of your business.
+                <h2 class="contact-mid-title" style = "color:#fff;">
+                    Connect Us
+                </h2>
 
-                    </p>
-                </div>
+                {% comment %} <p class="contact-mid-text">
+                    Connect with our team for expert cybersecurity and digital forensic solutions. 
+                    We are here to help you secure and grow your business.
+                </p> {% endcomment %}
 
-                <!-- Button -->
-                <div class="col-lg-4 col-md-4 col-12 text-md-end mt-3 mt-md-0">
-                    <a href="https://wa.me/919876543210?text=Hello%2C%20I%20visited%20your%20website%20and%20want%20to%20know%20more."
-                        target="_blank" class="contact-btn">Connect Us</a>
-                </div>
+                <ul class="contact-mid-info">
+                    <li><strong>📍 Address:</strong> Pune, Maharashtra, India</li>
+                    <li><strong>📞 Phone:</strong> +91 8668431882</li>
+                    <li><strong>📧 Email:</strong> info@stylotech.in</li>
+                </ul>
+
+                <a href="https://wa.me/918668431882" target="_blank" class="contact-mid-btn">
+                    Connect Now
+                </a>
 
             </div>
+
+            <!-- RIGHT MAP -->
+            <div class="contact-mid-right">
+
+                <iframe 
+                    src= "https://www.google.com/maps?q=18.52458010944136,73.85534372379898&z=15&output=embed">
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
         </div>
 
     </div>
 </div>
+
+
+
+
+
+{% comment %} <div class="contact-section">
+    <div class="container">
+
+        <div class="contact-card text-center">
+
+            <!-- Title -->
+            <h2 data-aos="fade-up" data-aos-delay="600" class="contact-title-expert">
+                Get Expert Consultation
+            </h2>
+
+            <!-- Text -->
+            <p  class="contact-text-expert">
+                Speak with our experts to receive reliable, professional guidance and tailored solutions
+                designed to protect and drive the growth of your business.
+            </p>
+
+            <!-- Button -->
+            <div>
+                <a href="https://wa.me/919665165103?text=Hello%2C%20I%20visited%20your%20website%20and%20want%20to%20know%20more."
+                    target="_blank" class="contact-btn">
+                    Connect Us
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div> {% endcomment %}
 
 <!-- Contact Section End -->
 <!-- Contact Section End -->
@@ -62,7 +117,7 @@ StyloTech - Contact-Page
         <div class="row g-4 ">
 
             <!-- Head Office -->
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex">
+            <div class="col-lg-6  d-flex">
                 <div class="office-card  w-100">
 
                     <h4>Head Office</h4>
@@ -72,7 +127,7 @@ StyloTech - Contact-Page
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             F1 & F3, Sawkar Laxmi Plaza, Shete Chowk,
-                            Guruwar Peth, Satara – 415001 (MH), India.
+                            Guruwar Peth, Satara – 415001 (MAH), India.
                         </li>
 
                         <li>
@@ -148,7 +203,7 @@ StyloTech - Contact-Page
                             <i class="fas fa-map-marker-alt"></i>
                             KL5, Sector 1, Ekta Apartment 2/3,
                             Kalamboli Colony, Panvel – 410218,
-                            Raigad (MH), India.
+                            Raigad (MAH), India.
                         </li>
 
                         <li>
@@ -215,19 +270,24 @@ StyloTech - Contact-Page
 <!-- Cta Start -->
 <div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
     <div class="container">
-        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});  padding: 80px 40px;
-                   border-radius: 15px;">
+        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});   padding: 48px 64px;
+                   border-radius: 15px; margin : -100px -18px; margin-top:20px;">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <!-- Cta Left Start -->
                     <div class="cta-left">
                         <div class="section-title">
-                            <h2 class="title white" style="font-size:30px;">To make requests for further information,
-                                contact us </h2>
+
+                            <!-- 🔥 BUTTON ADDED HERE -->
+                            <a href="https://wa.me/8668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank" class="cta-btn">
+                                Connect Us <i class="fas fa-paper-plane"></i>
+                            </a>
+
                         </div>
                     </div>
                     <!-- Cta Left End -->
                 </div>
+
                 <div class="col-lg-5">
                     <!-- Cta Right Start -->
                     <div class="cta-info text-center">
@@ -235,8 +295,8 @@ StyloTech - Contact-Page
                             <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
                         </div>
                         <div class="cta-text">
-                            <p>Call Us For Any Enquiry</p>
-                            <h3 class="number"> +91 7507575166</h3>
+                            {% comment %} <p>For Official Consultations and Inquiries</p> {% endcomment %}
+                            <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
                         </div>
                     </div>
                     <!-- Cta Right End -->

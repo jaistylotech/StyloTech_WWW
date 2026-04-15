@@ -9,22 +9,31 @@
                 <!-- Header Wrap Start  -->
                 <div class="header-wrap">
 
-                    <div class="header-logo">
-                        <a href="{% url 'home' %}"><img src="{% static 'assets/images/about/logo.png' %} "  alt=""></a>
-                        
-                    </div>
-
+                     <div class="header-logo">
+                         <a href="{% url 'home' %}" class="logo-wrap">
+                         <img src="{% static 'assets/images/logo.svg' %}" alt="">
+                        <span>StyloTech</span></a>
+                     </div>
                     <div class="header-menu d-none d-lg-block">
                         <ul class="main-menu">
                             <li class="{% if request.resolver_match.url_name == 'home' %} active-menu {% endif %}">
                                 <a href="{% url 'home' %}">Home</a>
+
+                            <li class="{% if request.resolver_match.url_name == 'about' %} active-menu {% endif %}">
+                                <a href="{% url 'about' %}">About Us</a>
                               
                              <li class="{% if request.resolver_match.url_name == 'pages' %} active-menu {% endif %}">
                                 <a href="#">product</a>
                                 <ul class="sub-menu">
-                                    <li><a href="{% url 'product_detail' 'lms' %}">Learning Management System (LMS) </a></li>
-                                    <li><a href="{% url 'product_detail' 'attendance' %}">Attendance System</a></li>
-                                    <li><a href="{% url 'product_detail' 'cms' %}">Club Management System (CMS)</a></li>
+                                    <li><a href="{% url 'product_detail' 'lms' %}"> <span>Learning Management System (LMS)</span>
+                                    <span class="arrow">➜</span>    
+                                    </a></li>
+                                    <li><a href="{% url 'product_detail' 'attendance' %}"><span>Attendance Management System (AMS)</span>
+                                     <span class="arrow">➜</span>   
+                                    </a></li>
+                                    <li><a href="{% url 'product_detail' 'cms' %}"><span>Club Management System (CMS)</span>
+                                    <span class="arrow">➜</span>
+                                    </a></li>
                                 </ul>
                             </li>
 
@@ -32,17 +41,18 @@
                                 <a href="{% url 'service' %}">Services</a>
                                 
 
-                            <li class="{% if request.resolver_match.url_name == 'training' %} active-menu {% endif %}">
+                             <li class="{% if request.resolver_match.url_name == 'training' %} active-menu {% endif %}">
                                 <a href="{% url 'training' %}">Trainings</a>
                             </li>
 
-                             <li class="{% if request.resolver_match.url_name == 'certifications' %} active-menu {% endif %}">
-                                <a href="{% url 'certifications' %}">Certifications</a>
-                                
+                             <li class="{% if request.resolver_match.url_name == 'r_n_d' %} active-menu {% endif %}">
+                                <a href="{% url 'R_n_D' %}">R&D</a>
+                             </li>
+                                 
 
                             <li class="{% if request.resolver_match.url_name == 'contact' %} active-menu {% endif %}">
-                              <a href="{% url 'contact' %}">Connect</a>
-
+                              <a href="{% url 'connect' %}">Connect Us</a>
+                            </li>
                             
                         </ul>
                     </div>
@@ -52,33 +62,18 @@
                         <!-- Header Social Start -->
                         <div class="header-social">
                             <ul>
-                                <li><a href="https://wa.me/917507575166?"  target="_blank"><i class="fab fa-whatsapp"  title="WhatsApp"  ></i>
+                                <li><a href="https://wa.me/8668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank"  target="_blank"><i class="fab fa-whatsapp"  title="WhatsApp"  ></i>
                                     </a></li>
-                                <li><a href="https://discord.gg/wP3utWyg6j"><i class="fab fa-discord" title="Discord"></i></a></li>
+                                <li><a href="https://discord.gg/CHv7jdMC75"  target="_blank"><i class="fab fa-discord" title="Discord"></i></a></li>
                                 <li><a href="https://www.instagram.com/stylotech.official?igsh=b2Q1MGk3empmOGhz" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"  title="Instagram"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/stylopedia-technology-pvt-ltd/"   target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"   title="Linkedin"  ></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCf0onMVETiM536HeLIxPHxg"   target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"   title="YouTube"  ></i></a></li>
                             </ul>
                         </div>
                         <!-- Header Social End -->
 
 
-                        <!-- Header Search Start -->
-                        <!-- <div class="header-search">
-                            <a class="search-btn" href="#"><i class="flaticon-loupe"></i></a>
-                            <div class="search-wrap">
-                                <div class="search-inner">
-                                    <i id="search-close" class="flaticon-close search-close"></i>
-                                    <div class="search-cell">
-                                        <form action="#">
-                                            <div class="search-field-holder">
-                                                <input class="main-search-input" type="search" placeholder="Search Your Keyword...">
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Header Search End -->
+                        
 
                         <!-- Header Toggle Start -->
                         <div class="header-toggle d-lg-none">
@@ -104,7 +99,7 @@
             <div class="offcanvas-header">
                 <!-- Offcanvas Logo Start -->
                 <div class="offcanvas-logo">
-                    <a href="{% url 'home' %}"><img src="{% static 'assets/images/about/logo.png' %} " alt=""></a>
+                    <a href="{% url 'home' %}"><img src="{% static 'assets/images/about/final_logo 1.png' %} " alt=""></a>
                 </div>
                 <!-- Offcanvas Logo End -->
                 <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i class="flaticon-close"></i></button>
@@ -121,7 +116,7 @@
                                 <a href="#">product</a>
                                 <ul class="sub-menu">
                                     <li><a href="{% url 'product_detail' 'lms' %}">Learning Management System (LMS) </a></li>
-                                    <li><a href="{% url 'product_detail' 'attendance' %}">Attendance System</a></li>
+                                    <li><a href="{% url 'product_detail' 'attendance' %}">Attendance Management System (AMS)</a></li>
                                     <li><a href="{% url 'product_detail' 'cms' %}">Club Management System (CMS)</a></li>
                                 </ul>
                             </li>
@@ -136,13 +131,13 @@
                                
                             </li>
 
-                             <li class="{% if request.resolver_match.url_name == 'certifications' %} active-menu {% endif %}">
-                                <a href="{% url 'certifications' %}">Certifications</a>
-                               
-                            </li>
+                             <li class="{% if request.resolver_match.url_name == 'r_n_d' %} active-menu {% endif %}">
+                                <a href="{% url 'R_n_D' %}">R&D</a>
+                             </li>
+                                 
 
                             <li class="{% if request.resolver_match.url_name == 'contact' %} active-menu {% endif %}">
-                              <a href="{% url 'contact' %}">Connect</a>
+                              <a href="{% url 'connect' %}">Connect Us</a>
 
                             
                         </ul>

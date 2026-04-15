@@ -11,7 +11,7 @@ StyloTech - About-Page
 
 
 <!-- Hero Start -->
-<div class="section techwix-hero-section-05" style="padding : 0px;">
+{% comment %} <div class="section techwix-hero-section-05" style="padding : 0px; ">
     <div class="techwix-hero-wrap"
         style="background-image: url({% static 'assets/images/about/about_hero.png' %}); border-radius: 0px">
         <div class="container">
@@ -20,11 +20,11 @@ StyloTech - About-Page
                     <!-- Hero Content Start -->
                     <div class="hero-content">
 
-                        <h2 class="title" data-aos="fade-up" data-aos-delay="800">About Us</h2>
-                        <p data-aos="fade-up" data-aos-delay="900">Delivering Advanced Cybersecurity, IT Consulting,
-                            and Digital Forensics Solutions</p>
-                        <div class="hero-btn" data-aos="fade-up" data-aos-delay="1000" style="margin-left: 30px;">
-                            <a class="btn" href="{% url 'contact' %}">Connect US </a>
+                        <h2 class="title" data-aos="fade-up" data-aos-delay="600" style = "font-size:40px; color:#ed2424;">About Us</h2>
+                        <p  data-aos="fade-up" data-aos-delay="800"style="line-height: 40px;">Empowering Organizations with Advanced Cyber-Defense, Strategic IT Advisory, and Forensic Investigation Excellence.
+                            
+                        <div class="hero-btn"  style="margin-left: 30px;">
+                            <a class="btn" style ="margin-left:-26px; justify-content: flex-start !important;  background: linear-gradient(195deg, #ed2424 0%, #ed2424 100%);"  href="{% url 'connect' %}">Connect Us </a>
                         </div>
                     </div>
                     <!-- Hero Content End -->
@@ -32,15 +32,26 @@ StyloTech - About-Page
 
             </div>
         </div>
-    </div>
+    </div> {% endcomment %}
 
     <!-- Hero End -->
 
 
 
 
+<div class="about-hero-section">
+    <div class="about-hero-wrap">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-delay="800">ABOUT US</h1>
+        </div>
+    </div>
+</div>
+
+
+
+
     <!-- About Intro Section -->
-    <div class="about-intro-section">
+    <div class="about-intro-section" style="margin-top:60px;">
         <div class="container-fluid p-0">
             <div class="about-intro-bg">
 
@@ -68,14 +79,54 @@ StyloTech - About-Page
         </div>
     </div>
 
+    <section class="core-values-section">
+    <div class="container">
 
+        <h2 class="vision-heading">Our Vision</h2>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+                {% comment %} <div class="icon">⭐</div> {% endcomment %}
+                   
+                <div class="icon"><i class="fas fa-star"></i></div>
+                <h3>Innovation</h3>
+                <p>We create advanced cybersecurity solutions.</p>
+            </div>
+
+            <div class="value-card">
+                {% comment %} <div class="icon">🔐</div> {% endcomment %}
+                <div class="icon"><i class="fas fa-lock"></i></div>
+                <h3>Security First</h3>
+                <p>Protecting systems with cutting-edge technology.</p>
+            </div>
+
+            <div class="value-card">
+
+                {% comment %} <div class="icon">⚡</div> {% endcomment %}
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h3>Performance</h3>
+                <p>High-speed and reliable solutions for clients.</p>
+            </div>
+
+            <div class="value-card">
+                {% comment %} <div class="icon">🤝</div> {% endcomment %}
+                <div class="icon"><i class="fas fa-handshake"></i></div>
+                <h3>Trust</h3>
+                <p>Building long-term relationships with clients.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 
 
 
 
     <!-- About Vision Section -->
-    <div class="about-vision-section py-5">
+    {% comment %} <div class="about-vision-section py-5">
         <div class="container">
             <div class="row align-items-center text-center text-md-start">
 
@@ -87,7 +138,7 @@ StyloTech - About-Page
                 <!-- Center Content -->
                 <div class="col-md-4 mb-4 mb-md-0 text-center">
                     <div class="vision-box">
-                        <h4>Our Vision</h4>
+                        <h4 style="font-size:30px; color:#fff;">Our Vision</h4>
                         <p style="text-align: justify;">Our vision is to create a secure digital ecosystem where
                             businesses can operate with confidence.By combining advanced technology, cybersecurity
                             expertise, and innovative thinking, we aim to become a leading global provider of
@@ -102,18 +153,18 @@ StyloTech - About-Page
 
             </div>
         </div>
-    </div>
+    </div> {% endcomment %}
 
 
     <!-- Mission Section -->
     <div class="mission-section py-5">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center"  >
 
                 <!-- Left Content -->
-                <div class="col-md-6 text-white">
-                    <h3>Our Mission</h3>
-                    <ul>
+                <div class="col-md-6 text-white"  >
+                    <h3 style="font-size:30px; color:#fff;">Our Mission</h3>
+                    <ul >
                         <li>Protect organizations from emerging cyber threats</li>
                         <li>Deliver innovative and reliable technology solutions.</li>
                         <li>Build skilled cybersecurity professionals for the future.</li>
@@ -196,15 +247,19 @@ StyloTech - About-Page
 
 <div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
     <div class="container">
-        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});  padding: 80px 40px;
-                   border-radius: 15px;">
+        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});  padding: 48px 64px;
+                   border-radius: 15px; margin : -100px -18px; margin-top:20px;">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <!-- Cta Left Start -->
                     <div class="cta-left">
                         <div class="section-title">
-                            <h2 class="title white" style="font-size:30px;">To make requests for further information,
-                                contact us </h2>
+
+                            <!-- 🔥 BUTTON ADDED HERE -->
+                            <a href="https://wa.me/8668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank" class="cta-btn">
+                                Connect Us <i class="fas fa-paper-plane"></i>
+                            </a>
+
                         </div>
                     </div>
                     <!-- Cta Left End -->
@@ -216,8 +271,8 @@ StyloTech - About-Page
                             <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
                         </div>
                         <div class="cta-text">
-                            <p>Call Us For Any Enquiry</p>
-                            <h3 class="number"> +91 7507575166</h3>
+                            {% comment %} <p>For Official Consultations and Inquiries</p> {% endcomment %}
+                            <h3 class="number" style ="color:#00FFF0"> +91 8668431882</h3>
                         </div>
                     </div>
                     <!-- Cta Right End -->
