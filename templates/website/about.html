@@ -49,37 +49,40 @@ StyloTech - About-Page
 
 
 
+<section class="stylo-about-section">
+  <div class="container">
+    <div class="row align-items-center">
 
-    <!-- About Intro Section -->
-    <div class="about-intro-section" style="margin-top:60px;">
-        <div class="container-fluid p-0">
-            <div class="about-intro-bg">
+      <!-- LEFT -->
+      <div class="col-lg-6">
+        <div class="stylo-about-content">
+          
+          <h2>
+            Empowering Careers <br>
+            in <span>Cyber Security</span>
+          </h2>
 
-                <!-- Overlay Content -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-7">
-                            <div class="about-card">
-                                <p style="text-align: justify;">StyloTech Team is a forward-thinking technology company
-                                    dedicated to protecting organizations from evolving cyber threats while helping
-                                    businesses grow through innovative IT solutions. Founded in 2021, StyloTech was
-                                    previously known as JPCS Consultancy and has rapidly grown into a trusted name in
-                                    Technology Services, IT Consulting, Cybersecurity, and Digital Forensics.
-                                    At StyloTech, we understand that the modern digital world brings both opportunities
-                                    and risks. As organizations adopt advanced technologies, cloud infrastructure, and
-                                    interconnected systems, the threat landscape continues to expand. Our mission is to
-                                    help businesses stay secure, resilient, and prepared for the challenges of tomorrow.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <p>
+            StyloTech Team Is A Forward-Thinking Technology Company Dedicated To Protecting Organizations From Evolving Cyber Threats While Helping Businesses Grow Through Innovative IT Solutions. Founded In 2021, StyloTech Was Previously Known As JPCS Consultancy And Has Rapidly Grown Into A Trusted Name In Technology Services, IT Consulting, Cybersecurity, And Digital Forensics. At StyloTech, We Understand That The Modern Digital World Brings Both Opportunities And Risks. As Organizations Adopt Advanced Technologies, Cloud Infrastructure, And Interconnected Systems, The Threat Landscape Continues To Expand. Our Mission Is To Help Businesses Stay Secure, Resilient, And Prepared For The Challenges Of Tomorrow.
+          </p>
 
-            </div>
         </div>
-    </div>
+      </div>
 
-    <section class="core-values-section">
+      <!-- RIGHT -->
+      <div class="col-lg-6">
+        <div class="stylo-about-img">
+          <img src="{% static 'assets/images/about/about_hero_2.png' %}" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="core-values-section" Style="margin-top:-40px;">
     <div class="container">
 
         <h2 class="vision-heading">Our Vision</h2>
@@ -157,34 +160,48 @@ StyloTech - About-Page
 
 
     <!-- Mission Section -->
-    <div class="mission-section py-5">
-        <div class="container">
-            <div class="row align-items-center"  >
+    <section class="stylo-mission-section" style = margin-top:-80px;>
+  <div class="container">
+    <div class="stylo-mission-box">
 
-                <!-- Left Content -->
-                <div class="col-md-6 text-white"  >
-                    <h3 style="font-size:30px; color:#fff;">Our Mission</h3>
-                    <ul >
-                        <li>Protect organizations from emerging cyber threats</li>
-                        <li>Deliver innovative and reliable technology solutions.</li>
-                        <li>Build skilled cybersecurity professionals for the future.</li>
-                        <li>Support businesses in achieving secure digital transformation.</li>
-                    </ul>
-                </div>
+      <div class="row align-items-center">
 
-                <!-- Right Image -->
-                <div class="col-md-6 text-center mt-4 mt-md-0">
-                    <img src="{% static 'assets/images/about/mission_img.png' %}" class="img-fluid" alt="">
-                </div>
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-6">
+          <div class="stylo-mission-content">
 
-            </div>
+            <h3>Our Mission</h3>
+
+            <p class="stylo-mission-text">
+              At StyloTech, our mission is to empower individuals and organizations with the knowledge, skills, and tools needed to thrive in the digital world securely
+            </p>
+
+            <ul class="stylo-mission-list">
+              <li>Protect Organizations From Emerging Cyber Threats.</li>
+              <li>Deliver Innovative And Reliable Technology Solutions.</li>
+              <li>Build Skilled Cybersecurity Professionals For The Future.</li>
+              <li>Support Businesses In Achieving Secure Digital Transformation.</li>
+            </ul>
+
+          </div>
         </div>
-    </div>
 
+        <!-- RIGHT IMAGE -->
+        <div class="col-lg-6">
+          <div class="stylo-mission-img">
+            <img src="{% static 'assets/images/about/mission_img3.jpeg' %}" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- Expertise Section -->
 
-    <div class="expertise-section py-5">
+    <div class="expertise-section " style = "margin-bottom:30px;">
         <div class="container text-center">
 
             <h2 class="expertise-title mb-5">Our Expertise</h2>
@@ -245,6 +262,63 @@ StyloTech - About-Page
 </div>
 
 
+<section class="stylo-why-section">
+  <div class="container text-center">
+
+    <h2 class="stylo-why-title">Why Choose StyloTech?</h2>
+
+    <div class="row mt-5">
+
+      <!-- ITEM 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="stylo-why-item">
+
+          <img src="{% static 'assets/images/about/about_icon1.png' %}" class="stylo-why-img" alt="">
+
+          <div class="stylo-why-text">
+            <h5>Expert Faculty</h5>
+            <p>Learn From Industry Experts With Real-World Experiences.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="stylo-why-item">
+
+          <img src="{% static 'assets/images/about/about_icon2.png' %}" class="stylo-why-img" alt="">
+
+          <div class="stylo-why-text">
+            <h5>Industry Recognized</h5>
+            <p>Certification That Add Value To Your Professional Career.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="stylo-why-item">
+
+          <img src="{% static 'assets/images/about/about_icon3.png' %}" class="stylo-why-img" alt="">
+
+          <div class="stylo-why-text">
+            <h5>Career Support</h5>
+            <p>We Help You Build Your Skills And Get Placed.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
 <div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
     <div class="container">
         <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});  padding: 48px 64px;
@@ -267,9 +341,9 @@ StyloTech - About-Page
                 <div class="col-lg-5">
                     <!-- Cta Right Start -->
                     <div class="cta-info text-center">
-                        <div class="cta-icon">
+                        {% comment %} <div class="cta-icon">
                             <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
-                        </div>
+                        </div> {% endcomment %}
                         <div class="cta-text">
                             {% comment %} <p>For Official Consultations and Inquiries</p> {% endcomment %}
                             <h3 class="number" style ="color:#00FFF0"> +91 8668431882</h3>

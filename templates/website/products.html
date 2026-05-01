@@ -1,0 +1,362 @@
+{% extends 'website/base.html' %}
+
+{% load static %}
+
+{% block title %}
+StyloTech - Product-Page
+{% endblock %}
+
+{% block content %}
+
+
+<!-- HERO SECTION -->
+
+<section class="product-hero-section">
+    <div class="product-hero-wrap">
+        <div class="container">
+            <h1 class="product-hero-title" data-aos="fade-up" data-aos-delay="300">
+                Products
+            </h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="stylo-pro-section py-5">
+  <div class="container">
+
+    <!-- TITLE -->
+    <h2 class="stylo-pro-title text-center mb-4">
+      Learning Management System (LMS)
+    </h2>
+
+    <!-- CONTENT -->
+    <div class="row align-items-center gy-4">
+
+      <div class="col-lg-6">
+        <p class="stylo-pro-desc">
+          Learning Management System (LMS) is a software platform used to create, manage, deliver, and track online learning or training programs. It allows organizations, schools, and training institutes to provide digital courses, monitor learner progress, and manage educational content in one centralized system. <br>
+An LMS enables instructors to upload study materials, videos, assignments, quizzes, and certifications, while learners can access courses anytime, track their progress, complete assessments, and interact with instructors online. It helps make learning more flexible, organized, and accessible from anywhere through the internet.
+        </p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'assets/images/product/product_img_5.png' %}" class="img-fluid stylo-pro-img">
+      </div>
+
+    </div>
+
+    <!-- FEATURES -->
+    <h3 class="stylo-pro-feature-title mt-3 mb-3" >Features</h3>
+
+    <!-- SWIPER -->
+    <div class="swiper styloSwiper">
+  <div class="swiper-wrapper">
+
+    <!-- 1 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-book"></i>
+        <h5>Course Management</h5>
+        <p>Create, organize, and manage online courses and learning modules.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-users"></i>
+        <h5>User Management</h5>
+        <p>Manage students, instructors, and administrators in one platform.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-video"></i>
+        <h5>Content Delivery</h5>
+        <p>Provide videos, documents, and study materials for online learning.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-chart-line"></i>
+        <h5>Progress Tracking</h5>
+        <p>Monitor learner progress, course completion, and performance.</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-file-alt"></i>
+        <h5>Online Assessments</h5>
+        <p>Conduct quizzes, assignments, and exams digitally.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-chart-pie"></i>
+        <h5>Reporting & Analytics</h5>
+        <p>Track learning data and generate performance reports.</p>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-shield-alt"></i>
+        <h5>Data Security & Backup</h5>
+        <p>Protects learner information and ensures safe storage of data.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+
+<section class="stylo-pro-section py-1">
+  <div class="container">
+
+    <!-- TITLE -->
+    <h2 class="stylo-pro-title text-center mb-4">
+      Attendance Management System 
+    </h2>
+
+    <!-- CONTENT -->
+    <div class="row align-items-center gy-4">
+
+      <div class="col-lg-6">
+        <p class="stylo-pro-desc">
+          Attendance Management System is a digital solution used to record, monitor, and manage the attendance of employees or students. It replaces manual registers with automated systems that ensure accurate and efficient attendance tracking. <br> The system collects attendance data through technologies such as biometric devices, RFID cards, mobile apps, or web-based systems, recording details like date, time, and user identity. It also allows administrators to monitor attendance in real time, generate reports, and manage features like leave, shifts, and payroll integration.
+Overall, it helps organizations improve accuracy, efficiency, and transparency while saving time and reducing manual errors.
+        </p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'assets/images/product/product_img_3.jpeg' %}" class="img-fluid stylo-pro-img">
+      </div>
+
+    </div>
+
+    <!-- FEATURES -->
+    <h3 class="stylo-pro-feature-title mt-3 mb-3">Features</h3>
+
+    <!-- SWIPER -->
+    <div class="swiper styloSwiper">
+  <div class="swiper-wrapper">
+
+    <!-- 1 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-fingerprint"></i>
+        <h5>Automated Attendance Tracking</h5>
+        <p>Automatically record attendance using biometric devices, RFID, or online login systems.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-clock"></i>
+        <h5>Real-Time Monitoring</h5>
+        <p>Track attendance and working hours in real time.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-calendar-check"></i>
+        <h5>Leave Management</h5>
+        <p>Manage employee or student leave requests and approvals.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-file-alt"></i>
+        <h5>Attendance Reports</h5>
+        <p>Generate detailed reports for attendance, absences, and late arrivals.</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-money-check-alt"></i>
+        <h5>Integration with Payroll</h5>
+        <p>Integrate attendance data with payroll systems for accurate salary calculations.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-mobile-alt"></i>
+        <h5>Mobile Access</h5>
+        <p>Access attendance records anytime using mobile devices.</p>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-shield-alt"></i>
+        <h5>Data Security</h5>
+        <p>Ensure secure storage and protection of attendance records.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+<section class="stylo-pro-section py-4 ">
+  <div class="container" style = "margin-top:30px">
+
+    <!-- TITLE -->
+    <h2 class="stylo-pro-title text-center mb-3">
+      Club Management System
+    </h2>
+
+    <!-- CONTENT -->
+    <div class="row align-items-center gy-4">
+
+      <div class="col-lg-6">
+        <p class="stylo-pro-desc">
+         A Club Management System is a digital platform designed to streamline and organize club activities efficiently. It allows administrators to manage member information, registrations, events, attendance, and payments within a single centralized system. The platform also supports event scheduling, communication with members, and real-time monitoring of activities. <br> By automating routine tasks and providing detailed reports and analytics, it reduces manual work and improves accuracy. Overall, a Club Management System enhances organization, saves time, and boosts member engagement, making club operations more efficient and effective.
+        </p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'assets/images/product/product_img_4.jpeg' %}" class="img-fluid stylo-pro-img">
+      </div>
+
+    </div>
+
+    <!-- FEATURES -->
+    <h3 class="stylo-pro-feature-title mt-3 mb-3">Features</h3>
+
+    <!-- SWIPER -->
+    <div class="swiper styloSwiper">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-users"></i>
+        <h5>Member Management</h5>
+        <p>Automatically record attendance using biometric devices, RFID, or online login systems.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-user-plus"></i>
+        <h5>Membership Registration</h5>
+        <p>Allow new members to register and join the club easily.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-calendar-alt"></i>
+        <h5>Event Management</h5>
+        <p>Plan, schedule, and manage club events, meetings, and activities.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-check-circle"></i>
+        <h5>Attendance Tracking</h5>
+        <p>Monitor attendance for events and meetings in real time.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-credit-card"></i>
+        <h5>Payment & Fee Management</h5>
+        <p>Track membership fees, subscriptions, and payment records.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-bullhorn"></i>
+        <h5>Communication Tools</h5>
+        <p>Send announcements, notifications, and updates to members.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide d-flex">
+      <div class="stylo-pro-card w-100">
+        <i class="fas fa-chart-bar"></i>
+        <h5>Reports & Analytics</h5>
+        <p>Generate reports on membership, events, and financial records.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Cta Start -->
+<div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
+    <div class="container">
+        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg5.jpg' %});  padding: 48px 64px;
+                   border-radius: 15px; margin : -100px -18px; margin-top:20px;">
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+                    <!-- Cta Left Start -->
+                    <div class="cta-left">
+                        <div class="section-title">
+
+                            <!-- 🔥 BUTTON ADDED HERE -->
+                            <a href="https://wa.me/8668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank" class="cta-btn">
+                                Connect Us <i class="fas fa-paper-plane"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Cta Left End -->
+                </div>
+
+                <div class="col-lg-5">
+                    <!-- Cta Right Start -->
+                    <div class="cta-info text-center">
+                        <div class="cta-icon">
+                            <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
+                        </div>
+                        <div class="cta-text">
+                            <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
+                        </div>
+                    </div>
+                    <!-- Cta Right End -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ {% endblock %}
