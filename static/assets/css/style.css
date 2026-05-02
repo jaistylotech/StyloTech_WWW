@@ -69,6 +69,10 @@ button:hover,
   padding: 0;
 }
 
+
+
+
+
 body {
   font-size: 14px;
   line-height: 1.75;
@@ -368,6 +372,18 @@ body {
 } */
 
 
+
+/* Footer Clicking issue solve */
+
+.widget-link {
+    position: relative;
+    z-index: 5;
+}
+
+.widget-link a {
+    position: relative;
+    z-index: 10;
+}
 
 
 /* NEW SEVICE SECTION */
@@ -982,12 +998,40 @@ button {
 }
 
 /* IMAGE */
-.stylo-pro-img {
-     max-width: 82%;
+/* .stylo-pro-img {
+     max-width: 82%; */
     /* padding-left: 53px; */
-    margin-left: 100px;
+    /* margin-left: 100px;
   
+} */
+
+/* DEFAULT (Mobile First) */
+.stylo-pro-img {
+  max-width: 82%;
+  margin: 0 auto !important;   /* 👉 center on mobile */
+  display: block;
 }
+
+/* TABLET */
+@media (min-width: 768px) {
+  .stylo-pro-img {
+    margin-left: 40px !important;   /* thoda shift */
+    margin-right: 0 !important;
+  }
+}
+
+/* LAPTOP / DESKTOP */
+@media (min-width: 992px) {
+  .stylo-pro-img {
+    margin-left: 100px !important;  /* full left shift */
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+
 
 /* FEATURE TITLE */
 .stylo-pro-feature-title {
@@ -1063,6 +1107,70 @@ button {
 }
 
 
+/* ===== CARD FINAL (OVERRIDE VERSION) ===== */
+.stylo-pro-card {
+  border: 1px solid #ed2424 !important;
+  border-radius: 10px !important;
+  padding: 14px !important;
+  text-align: center !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+
+  height: 100% !important;
+  min-height: 160px !important;   /* 🔥 height control */
+
+  transition: 0.3s ease !important;
+}
+
+/* ICON */
+.stylo-pro-card i {
+  font-size: 20px !important;
+  color: #ed2424 !important;
+  margin-bottom: 6px !important;
+}
+
+/* TITLE */
+.stylo-pro-card h5 {
+  font-size: 16px !important;
+  margin-bottom: 5px !important;
+  font-weight: 600 !important;
+}
+
+/* TEXT */
+.stylo-pro-card p {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  color: #333 !important;
+}
+
+/* HOVER */
+/* .stylo-pro-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 6px 12px rgba(255,0,0,0.2) !important;
+} */
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .stylo-pro-card {
+    padding: 12px !important;
+    min-height: 140px !important;
+  }
+
+  .stylo-pro-card h5 {
+    font-size: 14px !important;
+  }
+
+  .stylo-pro-card p {
+    font-size: 12px !important;
+  }
+
+  .stylo-pro-card i {
+    font-size: 18px !important;
+  }
+}
 
 
 
