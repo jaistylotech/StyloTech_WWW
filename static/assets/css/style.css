@@ -874,7 +874,7 @@ button {
 /* IMAGE */
 .stylo-about-img img {
   width: 100%;
-  max-width: 520px;
+  max-width: 566px;
   height: 300px;        /* 👈 increase height */
   object-fit: cover;    /* 👈 no distortion */
   border-radius: 10px;
