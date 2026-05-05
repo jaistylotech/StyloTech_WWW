@@ -660,38 +660,147 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-var swiper = new Swiper(".styloSwiper", {
-  slidesPerView: 5,
-  spaceBetween: 40,
-  loop: true,
 
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-    waitForTransition: false   // 👈 instant stop fix
-  },
+document.addEventListener("DOMContentLoaded", function () {
 
-  speed: 4000,
+  var swiper = new Swiper(".styloSwiper", {
+    slidesPerView: 5,
+    spaceBetween: 40,
+    loop: true,
 
-  allowTouchMove: true,
+    speed: 4000,
 
-  observer: true,
-  observeParents: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    observer: true,
+    observeParents: true,
+
+    breakpoints: {
+      0: { slidesPerView: 2, spaceBetween: 20 },
+      576: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      992: { slidesPerView: 5 },
+      1200: { slidesPerView: 5 }
+    }
+  });
+
 });
 
-const swiperEl = document.querySelector(".styloSwiper");
 
-swiperEl.addEventListener("click", () => {
-  if (swiper.autoplay.running) {
-    swiper.autoplay.stop();
 
-    // 👇 instantly freeze (no delay)
-    swiper.setTranslate(swiper.getTranslate());
-  } else {
-    swiper.autoplay.start();
-  }
-});
+
+
+
+
+// var swiper = new Swiper(".styloSwiper", {
+//   slidesPerView: 5,
+//   spaceBetween: 40,
+//   loop: true,
+
+//   speed: 4000,
+
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+
+//   observer: true,
+//   observeParents: true,
+
+//   breakpoints: {
+//     0: { slidesPerView: 2, spaceBetween: 20 },
+//     576: { slidesPerView: 3 },
+//     768: { slidesPerView: 4 },
+//     992: { slidesPerView: 5 },
+//     1200: { slidesPerView: 5 }
+//   }
+// });
+
+
+// // 🔥 BUTTON FIX
+// document.querySelector(".swiper-button-next").addEventListener("click", () => {
+//   swiper.autoplay.stop();        // pause
+//   swiper.slideNext(500);         // move
+//   setTimeout(() => {
+//     swiper.autoplay.start();     // resume
+//   }, 600);
+// });
+
+// document.querySelector(".swiper-button-prev").addEventListener("click", () => {
+//   swiper.autoplay.stop();
+//   swiper.slidePrev(500);
+//   setTimeout(() => {
+//     swiper.autoplay.start();
+//   }, 600);
+// });
+
+
+
+// var swiper = new Swiper(".styloSwiper", {
+//   slidesPerView: 5,
+//   spaceBetween: 40,
+//   loop: true,
+
+//   speed: 4000,
+
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+
+//   observer: true,
+//   observeParents: true,
+
+//   breakpoints: {
+//     0: { slidesPerView: 2, spaceBetween: 20 },
+//     576: { slidesPerView: 3 },
+//     768: { slidesPerView: 4 },
+//     992: { slidesPerView: 5 },
+//     1200: { slidesPerView: 5 }
+//   }
+// });
+
+
+// var swiper = new Swiper(".styloSwiper", {
+//   slidesPerView: 5,
+//   spaceBetween: 40,
+//   loop: true,
+
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//     pauseOnMouseEnter: true,
+//     waitForTransition: false   // 👈 instant stop fix
+//   },
+
+//   speed: 4000,
+
+//   allowTouchMove: true,
+
+//   observer: true,
+//   observeParents: true,
+// });
+
+// const swiperEl = document.querySelector(".styloSwiper");
+
+// swiperEl.addEventListener("click", () => {
+//   if (swiper.autoplay.running) {
+//     swiper.autoplay.stop();
+
+//     // 👇 instantly freeze (no delay)
+//     swiper.setTranslate(swiper.getTranslate());
+//   } else {
+//     swiper.autoplay.start();
+//   }
+// });
 
 
 
@@ -718,3 +827,5 @@ document.querySelectorAll(".stylo-learn-btn").forEach(btn => {
     card.classList.add("flip");
   });
 });
+
+

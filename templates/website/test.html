@@ -1,0 +1,13 @@
+<button onclick="openVideo()">Play</button>
+
+<div id="videoModal" style="display:none;">
+    <iframe id="youtubeVideo" width="560" height="315"></iframe>
+</div>
+
+<script>
+function openVideo() {
+    document.getElementById("videoModal").style.display = "block";
+    document.getElementById("youtubeVideo").src =
+    "https://www.youtube.com/embed/WSth5RyZEko?autoplay=1&mute=1";
+}
+</script>

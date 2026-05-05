@@ -1725,7 +1725,7 @@ button {
 
 /* ICON */
 .stylo-pro-card i {
-  font-size: 20px !important;
+  font-size: 26px !important;
   color: #ed2424 !important;
   margin-bottom: 6px !important;
 }
@@ -1735,6 +1735,7 @@ button {
   font-size: 16px !important;
   margin-bottom: 5px !important;
   font-weight: 600 !important;
+  color: #fff;
 }
 
 /* TEXT */
@@ -1770,6 +1771,72 @@ button {
     font-size: 18px !important;
   }
 }
+
+
+.stylo-feature-box {
+  position: relative;
+  background: #012e63;
+  padding: 30px 50px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* card white style */
+.stylo-feature-box .stylo-pro-card {
+  border: 1px solid rgba(255,255,255,0.5) !important;
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.stylo-feature-box .stylo-pro-card p {
+  color: #ddd !important;
+}
+
+/* arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+}
+
+.styloSwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* 🔥 arrows ko upar lao */
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  z-index: 9999 !important;
+}
+
+/* 🔥 swiper ko niche bhejo */
+.styloSwiper {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* 🔥 wrapper overlap fix */
+.stylo-feature-box {
+  position: relative !important;
+}
+
+.styloSwiper .swiper-wrapper {
+  pointer-events: auto !important;
+}
+
+.stylo-feature-box {
+  position: relative;
+  overflow: visible !important;   /* 🔥 VERY IMPORTANT */
+}
+
+
+
 
 
 
@@ -5222,7 +5289,17 @@ img {
   color: #444;
 }
 
+@media (max-width: 768px) {
+  .stylo-why-section .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
+
+.stylo-why-section .row {
+  justify-content: center;
+}
 
 
 
