@@ -700,6 +700,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
 // var swiper = new Swiper(".styloSwiper", {
 //   slidesPerView: 5,
 //   spaceBetween: 40,
