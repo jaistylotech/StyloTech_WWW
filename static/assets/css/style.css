@@ -1417,13 +1417,29 @@ button {
 
 /* SECTION */
 .stylo-about-section {
-  padding: 60px 0;
+  padding: 50px 20px;   /* 👈 compact */
   background: #fff;
+}
+
+/* CONTAINER WIDER */
+.stylo-about-section .container {
+  max-width: 1300px;   /* 👈 gap fix */
+}
+
+/* REMOVE ROW GAP */
+.stylo-about-section .row {
+  margin: 0;
+}
+
+/* COLUMN TIGHT */
+.stylo-about-section .col-lg-6 {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* CONTENT */
 .stylo-about-content {
-  max-width: 500px;
+  max-width: 600px;   /* 👈 increase width */
 }
 
 /* HEADING */
@@ -1443,23 +1459,23 @@ button {
   font-size: 13px;
   color: #444;
   line-height: 1.7;
-  text-align:justify;
+  text-align: justify;
 }
 
 /* IMAGE WRAPPER */
 .stylo-about-img {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;   /* 👈 push image */
+  align-items: center;
 }
 
 /* IMAGE */
 .stylo-about-img img {
   width: 100%;
-  max-width: 566px;
-  height: 300px;        /* 👈 increase height */
-  object-fit: cover;    /* 👈 no distortion */
-  border-radius: 10px;
-  display: block;
+  max-width: 620px;   /* 👈 bigger image */
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* RESPONSIVE */
@@ -1480,11 +1496,10 @@ button {
   }
 
   .stylo-about-img img {
-    max-width: 400px;
+    max-width: 420px;
+    height: auto;
   }
 }
-
-
 
 
 
