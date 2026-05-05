@@ -497,7 +497,6 @@ body {
 
 
 
-
 /* SECTION */
 .stylo-ai-section {
   padding: 40px 0;   /* 👈 pehle 60 tha → ab tight */
@@ -1027,7 +1026,11 @@ body {
   color: red;
   font-weight: 500;
   cursor: pointer;
+  font-size: 22px;
 }
+
+
+
 
 .stylo-service-front {
   pointer-events: auto;
@@ -1366,7 +1369,7 @@ button {
   height: 130px;
   border-radius: 50%;
   background: #fff;
-  border: 2px solid #eee;
+  border: 2px solid #012e63;
 
   display: flex;
   flex-direction: column;
@@ -1397,7 +1400,7 @@ button {
 
 /* HOVER EFFECT */
 .stylo-service-item:hover .stylo-service-circle {
-  border-color: #ff0000;
+  border-color: #012e63;
   box-shadow: 0 10px 25px rgba(255,0,0,0.2);
   transform: translateY(-6px);
 }
