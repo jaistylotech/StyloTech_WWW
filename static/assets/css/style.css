@@ -1020,15 +1020,34 @@ body {
 }
 
 
-.stylo-learn-btn {
+/* .stylo-learn-btn {
   background: none;
   border: none;
   color: red;
   font-weight: 500;
   cursor: pointer;
   font-size: 22px;
-}
+  
+} */
 
+.stylo-learn-btn {
+  width: 42px;
+  height: 42px;
+
+  border: 2px solid #ff0000;
+  border-radius: 50%;
+
+  color: #ff0000;
+  font-size: 26px;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px auto 0;
+  cursor: pointer;
+}
 
 
 
@@ -1224,7 +1243,7 @@ body {
   color: #888;
   line-height: 1.6;
 }
-
+/* 
 .stylo-learn-btn {
   background: none;
   border: none;
@@ -1232,7 +1251,7 @@ body {
   font-weight: 500;
   margin-top: 10px;
   cursor: pointer;
-}
+} */
 
 
 
@@ -1306,9 +1325,9 @@ body {
 }
 
 /* BUTTON */
-button {
+/* button {
   margin-top: 10px;
-}
+} */
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -1353,7 +1372,7 @@ button {
   top: 50%;
   left: 10%;
   right: 10%;
-  border-top: 2px dotted #ff0000;
+  border-top: 2px dotted #012e63;
   z-index: 0;
 }
 
