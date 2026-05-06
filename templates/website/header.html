@@ -17,33 +17,33 @@
                     <div class="header-menu d-none d-lg-block">
                         <ul class="main-menu">
                             <li class="{% if request.resolver_match.url_name == 'home' %} active-menu {% endif %}">
-                                <a href="{% url 'home' %}">Home</a>
+                                <a href="{% url 'home' %}">Home</a></li>
 
                             <li class="{% if request.resolver_match.url_name == 'about' %} active-menu {% endif %}">
-                                <a href="{% url 'about' %}">About Us</a>
+                                <a href="{% url 'about' %}">About Us</a></li>
                               
-                             <li class="{% if request.resolver_match.url_name == 'pages' %} active-menu {% endif %}">
-                                <a href="#">product</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{% url 'product_detail' 'lms' %}"> <span>Learning Management System (LMS)</span>
+                             <li class="{% if request.resolver_match.url_name == 'products' %} active-menu {% endif %}">
+                                <a href="{% url 'products' %}">Products</a>
+                                {% comment %} <ul class="sub-menu">
+                                    <li><a href="{% url 'products' %}"> <span>Learning Management System (LMS)</span>
                                     <span class="arrow">➜</span>    
                                     </a></li>
-                                    <li><a href="{% url 'product_detail' 'attendance' %}"><span>Attendance Management System (AMS)</span>
+                                    <li><a href="{% url 'products' %}"><span>Attendance Management System (AMS)</span>
                                      <span class="arrow">➜</span>   
                                     </a></li>
-                                    <li><a href="{% url 'product_detail' 'cms' %}"><span>Club Management System (CMS)</span>
+                                    <li><a href="{% url 'products' %}"><span>Club Management System (CMS)</span>
                                     <span class="arrow">➜</span>
                                     </a></li>
-                                </ul>
+                                </ul> {% endcomment %}
                             </li>
 
                             <li class="{% if request.resolver_match.url_name == 'service' %} active-menu {% endif %}">
                                 <a href="{% url 'service' %}">Services</a>
                                 
 
-                             <li class="{% if request.resolver_match.url_name == 'training' %} active-menu {% endif %}">
+                             {% comment %} <li class="{% if request.resolver_match.url_name == 'training' %} active-menu {% endif %}">
                                 <a href="{% url 'training' %}">Trainings</a>
-                            </li>
+                            </li> {% endcomment %}
 
                              <li class="{% if request.resolver_match.url_name == 'r_n_d' %} active-menu {% endif %}">
                                 <a href="{% url 'R_n_D' %}">R&D</a>
@@ -62,9 +62,9 @@
                         <!-- Header Social Start -->
                         <div class="header-social">
                             <ul>
-                                <li><a href="https://wa.me/8668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank"  target="_blank"><i class="fab fa-whatsapp"  title="WhatsApp"  ></i>
+                                <li><a href="https://wa.me/+918668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank"  target="_blank"><i class="fab fa-whatsapp"  title="WhatsApp"  ></i>
                                     </a></li>
-                                <li><a href="https://discord.gg/CHv7jdMC75"  target="_blank"><i class="fab fa-discord" title="Discord"></i></a></li>
+                                <li><a href="https://discord.gg/FZrj2hrK4Q"  target="_blank"><i class="fab fa-discord" title="Discord"></i></a></li>
                                 <li><a href="https://www.instagram.com/stylotech.official?igsh=b2Q1MGk3empmOGhz" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"  title="Instagram"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/stylopedia-technology-pvt-ltd/"   target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"   title="Linkedin"  ></i></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCf0onMVETiM536HeLIxPHxg"   target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"   title="YouTube"  ></i></a></li>
@@ -110,15 +110,21 @@
                 <div class="offcanvas-menu">
                     <ul class="main-menu">
                             <li class="{% if request.resolver_match.url_name == 'home' %} active-menu {% endif %}">
-                                <a href="{% url 'home' %}">Home</a>
+                                <a href="{% url 'home' %}">Home</a></li>
+
+
+                             <li class="{% if request.resolver_match.url_name == 'about' %} active-menu {% endif %}">
+                                <a href="{% url 'about' %}">About Us</a>
+
+                             </li>
                               
-                             <li class="{% if request.resolver_match.url_name == 'pages' %} active-menu {% endif %}">
-                                <a href="#">product</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{% url 'product_detail' 'lms' %}">Learning Management System (LMS) </a></li>
-                                    <li><a href="{% url 'product_detail' 'attendance' %}">Attendance Management System (AMS)</a></li>
-                                    <li><a href="{% url 'product_detail' 'cms' %}">Club Management System (CMS)</a></li>
-                                </ul>
+                             <li class="{% if request.resolver_match.url_name == 'products' %} active-menu {% endif %}">
+                                <a href="{% url 'products' %}">Products</a>
+                                {% comment %} <ul class="sub-menu">
+                                    <li><a href="{% url 'products' %}">Learning Management System (LMS) </a></li>
+                                    <li><a href="{% url 'products' %}">Attendance Management System (AMS)</a></li>
+                                    <li><a href="{% url 'products' %}">Club Management System (CMS)</a></li>
+                                </ul> {% endcomment %}
                             </li>
 
                              <li class="{% if request.resolver_match.url_name == 'pages' %} active-menu {% endif %}">
@@ -126,10 +132,10 @@
     
                             </li>
 
-                            <li class="{% if request.resolver_match.url_name == 'pages' %} active-menu {% endif %}">
+                            {% comment %} <li class="{% if request.resolver_match.url_name == 'pages' %} active-menu {% endif %}">
                                 <a href="{% url 'training' %}">Trainings</a>
                                
-                            </li>
+                            </li> {% endcomment %}
 
                              <li class="{% if request.resolver_match.url_name == 'r_n_d' %} active-menu {% endif %}">
                                 <a href="{% url 'R_n_D' %}">R&D</a>

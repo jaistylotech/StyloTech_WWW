@@ -215,39 +215,22 @@
 
   
 /*--js add by me */
-//  document.addEventListener("DOMContentLoaded", function () {
 
-//      const scrollBox = document.querySelector(".scroll-services");
-
-//     let scrollSpeed = 1;
-
-//     function autoScroll() {
-//         scrollBox.scrollTop += scrollSpeed;
-
-//         if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight) {
-//             scrollBox.scrollTop = 0;
-//         }
-//     }
-
-//     setInterval(autoScroll, 60);
-
-// });
 
 
 document.addEventListener("DOMContentLoaded", function () {
 
     const scrollBox = document.querySelector(".scroll-services");
 
-    // Step 1: wrapper banao
+    if (!scrollBox) return; // ✅ crash prevent
+
     const content = document.createElement("div");
     content.classList.add("scroll-inner");
 
-    // existing content ko wrap karo
     while (scrollBox.firstChild) {
         content.appendChild(scrollBox.firstChild);
     }
 
-    // clone banao
     const clone = content.cloneNode(true);
 
     scrollBox.appendChild(content);
@@ -257,27 +240,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let isPaused = false;
 
     function autoScroll() {
-
         if (!isPaused) {
             scrollBox.scrollTop += speed;
 
-            // exact height pe reset (no mismatch)
             if (scrollBox.scrollTop >= content.offsetHeight) {
                 scrollBox.scrollTop = 0;
             }
         }
-
         requestAnimationFrame(autoScroll);
     }
 
     autoScroll();
 
-    // hover pause
     scrollBox.addEventListener("mouseenter", () => isPaused = true);
     scrollBox.addEventListener("mouseleave", () => isPaused = false);
 
 });
-
 
 
 
@@ -393,30 +371,11 @@ if (window.location.pathname === "/privacy/" || window.location.pathname === "/t
 }
 
 
-function openVideo(event) {
-    if(event) event.preventDefault();
 
-    let modal = document.getElementById("videoModal");
-    let video = document.getElementById("myVideo");
 
-    modal.style.display = "flex";
 
-    // 🔥 IMPORTANT: thoda delay do
-    setTimeout(() => {
-        video.play().catch(error => {
-            console.log("Autoplay blocked:", error);
-        });
-    }, 200);
-}
 
-function closeVideo() {
-    let video = document.getElementById("myVideo");
 
-    video.pause();
-    video.currentTime = 0;
-
-    document.getElementById("videoModal").style.display = "none";
-}
 
 
     /*--    
@@ -493,25 +452,24 @@ function closeVideo() {
         once: true,
     });
 
+const container = document.getElementById("binaryBg");
 
+if (container) {
+    setInterval(() => {
+        const span = document.createElement("span");
+        span.className = "binary";
+        span.innerText = Math.random() > 0.5 ? "1" : "0";
 
- const container = document.getElementById("binaryBg");
+        span.style.left = Math.random() * 100 + "%";
+        span.style.animationDuration = (3 + Math.random() * 3) + "s";
 
-setInterval(() => {
-    const span = document.createElement("span");
-    span.className = "binary";
-    span.innerText = Math.random() > 0.5 ? "1" : "0";
+        container.appendChild(span);
 
-    span.style.left = Math.random() * 100 + "%";
-    span.style.animationDuration = (3 + Math.random() * 3) + "s";
-
-    container.appendChild(span);
-
-    setTimeout(() => {
-        span.remove();
-    }, 6000);
-}, 120);   
-
+        setTimeout(() => {
+            span.remove();
+        }, 6000);
+    }, 120);
+}
 
 tsParticles.load("tsparticles-footer", {
   fullScreen: { enable: false },
@@ -567,113 +525,105 @@ tsParticles.load("tsparticles-footer", {
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
-  let index = 0;
-  const track = document.getElementById("droneTrack");
-  const images = document.querySelectorAll("#droneTrack img");
-  const total = images.length;
+  // ===== GENERIC SLIDER FUNCTION =====
+  function initSlider(trackId, nextClass, prevClass) {
 
-  const next = document.querySelector(".drone-next");
-  const prev = document.querySelector(".drone-prev");
+    let index = 0;
 
-  function slide() {
-    track.style.transition = "transform 0.6s ease-in-out";
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
+    const track = document.getElementById(trackId);
+    const images = document.querySelectorAll(`#${trackId} img`);
+    const total = images.length;
 
-  next.addEventListener("click", () => {
-    index++;
-    slide();
+    const next = document.querySelector(nextClass);
+    const prev = document.querySelector(prevClass);
 
-    if (index === total - 1) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = "translateX(0)";
-      }, 600);
-    }
-  });
+    // ✅ SAFETY CHECK (MOST IMPORTANT)
+    if (!track || !next || !prev || total === 0) return;
 
-  prev.addEventListener("click", () => {
-    if (index === 0) {
-      track.style.transition = "none";
-      index = total - 1;
+    function slide() {
+      track.style.transition = "transform 0.6s ease-in-out";
       track.style.transform = `translateX(-${index * 100}%)`;
+    }
 
-      setTimeout(() => {
+    next.addEventListener("click", () => {
+      index++;
+      slide();
+
+      if (index === total - 1) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          index = 0;
+          track.style.transform = "translateX(0)";
+        }, 600);
+      }
+    });
+
+    prev.addEventListener("click", () => {
+      if (index === 0) {
+        track.style.transition = "none";
+        index = total - 1;
+        track.style.transform = `translateX(-${index * 100}%)`;
+
+        setTimeout(() => {
+          index--;
+          slide();
+        }, 50);
+      } else {
         index--;
         slide();
-      }, 50);
-    } else {
-      index--;
+      }
+    });
+
+    // AUTO SLIDE
+    setInterval(() => {
+      index++;
       slide();
-    }
-  });
 
-  // AUTO SLIDE
-  setInterval(() => {
-    index++;
-    slide();
+      if (index === total - 1) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          index = 0;
+          track.style.transform = "translateX(0)";
+        }, 600);
+      }
+    }, 2500);
+  }
 
-    if (index === total - 1) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = "translateX(0)";
-      }, 600);
-    }
-  }, 2500);
+  // ===== INIT ALL SLIDERS =====
+  initSlider("labTrack", ".lab-next", ".lab-prev");
+  initSlider("droneTrack", ".drone-next", ".drone-prev");
+  initSlider("defenceTrack", ".defence-next", ".defence-prev");
 
 });
 
 
+// const cards = document.querySelectorAll(".info-card");
+// let index = 0;
+
+// setInterval(() => {
+
+//     cards[index].classList.remove("active");
+//     cards[index].classList.add("prev");
+
+//     index = (index + 1) % cards.length;
+
+//     cards[index].classList.add("active");
+
+//     setTimeout(() => {
+//         cards.forEach(card => card.classList.remove("prev"));
+//     }, 500);
+
+// }, 2000);
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
 
+  const infoCards = document.querySelectorAll(".info-card");
+  const slider = document.querySelector(".info-card-slider");
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".stylo-feature-box").forEach((container) => {
-    const swiperEl = container.querySelector(".styloSwiper");
-    const nextBtn = container.querySelector(".swiper-button-next");
-    const prevBtn = container.querySelector(".swiper-button-prev");
-
-<<<<<<< Updated upstream
-  let index = 0;
-  const track = document.getElementById("defenceTrack");
-  const images = document.querySelectorAll("#defenceTrack img");
-  const total = images.length;
-
-  const next = document.querySelector(".defence-next");
-  const prev = document.querySelector(".defence-prev");
-
-  function slide() {
-    track.style.transition = "transform 0.6s ease-in-out";
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  next.addEventListener("click", () => {
-    index++;
-    slide();
-
-    if (index === total - 1) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = "translateX(0)";
-      }, 600);
-    }
-  });
-
-  prev.addEventListener("click", () => {
-    if (index === 0) {
-      track.style.transition = "none";
-      index = total - 1;
-      track.style.transform = `translateX(-${index * 100}%)`;
-=======
     if (!swiperEl) return;
 
     const swiper = new Swiper(swiperEl, {
@@ -702,50 +652,188 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
->>>>>>> Stashed changes
 
-      setTimeout(() => {
-        index--;
-        slide();
-      }, 50);
-    } else {
-      index--;
-      slide();
-    }
-  });
+  if (slider) {
+      slider.addEventListener("mouseenter", stopSlider);
+      slider.addEventListener("mouseleave", startSlider);
+  }
 
-  // AUTO SLIDE
-  setInterval(() => {
-    index++;
-    slide();
-
-    if (index === total - 1) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = "translateX(0)";
-      }, 600);
-    }
-  }, 2500);
+  
+  
+  
 
 });
 
 
 
-const cards = document.querySelectorAll(".info-card");
-let index = 0;
+document.addEventListener("DOMContentLoaded", function () {
 
-setInterval(() => {
+  var swiper = new Swiper(".styloSwiper", {
+    slidesPerView: 5,
+    spaceBetween: 40,
+    loop: true,
 
-    cards[index].classList.remove("active");
-    cards[index].classList.add("prev");
+    speed: 4000,
 
-    index = (index + 1) % cards.length;
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
 
-    cards[index].classList.add("active");
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 
-    setTimeout(() => {
-        cards.forEach(card => card.classList.remove("prev"));
-    }, 500);
+    observer: true,
+    observeParents: true,
 
-}, 2000);
+    breakpoints: {
+      0: { slidesPerView: 2, spaceBetween: 20 },
+      576: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      992: { slidesPerView: 5 },
+      1200: { slidesPerView: 5 }
+    }
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+// var swiper = new Swiper(".styloSwiper", {
+//   slidesPerView: 5,
+//   spaceBetween: 40,
+//   loop: true,
+
+//   speed: 4000,
+
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+
+//   observer: true,
+//   observeParents: true,
+
+//   breakpoints: {
+//     0: { slidesPerView: 2, spaceBetween: 20 },
+//     576: { slidesPerView: 3 },
+//     768: { slidesPerView: 4 },
+//     992: { slidesPerView: 5 },
+//     1200: { slidesPerView: 5 }
+//   }
+// });
+
+
+// // 🔥 BUTTON FIX
+// document.querySelector(".swiper-button-next").addEventListener("click", () => {
+//   swiper.autoplay.stop();        // pause
+//   swiper.slideNext(500);         // move
+//   setTimeout(() => {
+//     swiper.autoplay.start();     // resume
+//   }, 600);
+// });
+
+// document.querySelector(".swiper-button-prev").addEventListener("click", () => {
+//   swiper.autoplay.stop();
+//   swiper.slidePrev(500);
+//   setTimeout(() => {
+//     swiper.autoplay.start();
+//   }, 600);
+// });
+
+
+
+// var swiper = new Swiper(".styloSwiper", {
+//   slidesPerView: 5,
+//   spaceBetween: 40,
+//   loop: true,
+
+//   speed: 4000,
+
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+
+//   observer: true,
+//   observeParents: true,
+
+//   breakpoints: {
+//     0: { slidesPerView: 2, spaceBetween: 20 },
+//     576: { slidesPerView: 3 },
+//     768: { slidesPerView: 4 },
+//     992: { slidesPerView: 5 },
+//     1200: { slidesPerView: 5 }
+//   }
+// });
+
+
+// var swiper = new Swiper(".styloSwiper", {
+//   slidesPerView: 5,
+//   spaceBetween: 40,
+//   loop: true,
+
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//     pauseOnMouseEnter: true,
+//     waitForTransition: false   // 👈 instant stop fix
+//   },
+
+//   speed: 4000,
+
+//   allowTouchMove: true,
+
+//   observer: true,
+//   observeParents: true,
+// });
+
+// const swiperEl = document.querySelector(".styloSwiper");
+
+// swiperEl.addEventListener("click", () => {
+//   if (swiper.autoplay.running) {
+//     swiper.autoplay.stop();
+
+//     // 👇 instantly freeze (no delay)
+//     swiper.setTranslate(swiper.getTranslate());
+//   } else {
+//     swiper.autoplay.start();
+//   }
+// });
+
+
+
+document.querySelectorAll(".stylo-learn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    let card = this.closest(".stylo-service-card");
+    card.classList.add("flip");
+  });
+});
+
+/* MOUSE LEAVE → AUTO BACK */
+document.querySelectorAll(".stylo-service-card").forEach(card => {
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("flip");
+  });
+});
+
+
+
+document.querySelectorAll(".stylo-learn-btn").forEach(btn => {
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation(); // important
+    let card = this.closest(".stylo-service-card");
+    card.classList.add("flip");
+  });
+});
+
+
