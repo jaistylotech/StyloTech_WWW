@@ -636,7 +636,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".stylo-feature-box").forEach((container) => {
+    const swiperEl = container.querySelector(".styloSwiper");
+    const nextBtn = container.querySelector(".swiper-button-next");
+    const prevBtn = container.querySelector(".swiper-button-prev");
 
+<<<<<<< Updated upstream
   let index = 0;
   const track = document.getElementById("defenceTrack");
   const images = document.querySelectorAll("#defenceTrack img");
@@ -668,6 +673,36 @@ document.addEventListener("DOMContentLoaded", function () {
       track.style.transition = "none";
       index = total - 1;
       track.style.transform = `translateX(-${index * 100}%)`;
+=======
+    if (!swiperEl) return;
+
+    const swiper = new Swiper(swiperEl, {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 40,
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn,
+      },
+      observer: true,
+      observeParents: true,
+      breakpoints: {
+        0: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20 },
+        576: { slidesPerView: 2, slidesPerGroup: 2 },
+        768: { slidesPerView: 2, slidesPerGroup: 2 },
+        992: { slidesPerView: 3, slidesPerGroup: 3 },
+        1200: { slidesPerView: 3, slidesPerGroup: 3 },
+      },
+    });
+  });
+});
+>>>>>>> Stashed changes
 
       setTimeout(() => {
         index--;
