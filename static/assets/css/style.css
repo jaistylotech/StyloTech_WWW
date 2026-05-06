@@ -373,6 +373,53 @@ body {
 
 
 
+.info-card-slider{
+  position: relative;
+}
+
+.slider-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 26px;
+  height: 26px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ed2424;
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  z-index: 99;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+/* LEFT BUTTON */
+.prev-arrow{
+  left: 0px;
+}
+
+/* RIGHT BUTTON */
+.next-arrow{
+  right: 0px;
+}
+
+.slider-arrow:hover{
+  opacity: 0.9;
+  transform: translateY(-50%) scale(1.05);
+}
+
+
 
 
 
@@ -593,6 +640,7 @@ body {
   border-radius: 12px;
 }
 
+
 /* RESPONSIVE */
 @media (max-width: 992px) {
 
@@ -601,17 +649,24 @@ body {
   }
 
   .stylo-ai-left {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 25px;
   }
 
   .stylo-ai-right {
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .stylo-ai-right img {
+    max-width: 100%;
     height: auto;
   }
+
+  .stylo-ai-title {
+    font-size: 24px;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -626,19 +681,21 @@ body {
     height: 14px;
     font-size: 9px;
   }
+
 }
 
 
-
+/* DRONE CSS */
 
 /* SECTION */
 .stylo-drone-section {
-  padding: 40px 0;   /* 👈 compact */
+  padding: 40px 0;
+  background: #fff;
 }
 
 /* BOX */
 .stylo-drone-box {
-  border: 1.5px solid rgba(255,0,0,0.4);   /* thin border */
+  border: 1.2px solid rgba(255,0,0,0.4);
   border-radius: 22px;
   padding: 25px 30px;
   box-shadow: 0 8px 20px rgba(255,0,0,0.12);
@@ -656,44 +713,35 @@ body {
 
 /* LEFT IMAGE */
 .stylo-drone-left {
-  /* display: flex;
-  align-items: center; */
   display: flex;
-  justify-content: center;  /* 👈 right shift */
+  justify-content: center;
   align-items: center;
 }
 
 .stylo-drone-left img {
   width: 100%;
-  max-width: 480px;
+  max-width: 380px;
   border-radius: 12px;
-  display: block;
 }
 
 /* RIGHT CONTENT */
-.stylo-drone-right {
-  padding-left: 20px;   /* 👈 slight spacing only */
-}
-
-/* TAG */
 .stylo-drone-tag {
-  color: #ed2424;
+  color: #ff0000;
   font-size: 18px;
   font-weight: 600;
 }
 
-/* TITLE */
 .stylo-drone-title {
   font-size: 28px;
   font-weight: 700;
   margin: 8px 0;
 }
 
-/* DESC */
 .stylo-drone-desc {
   font-size: 13px;
   color: #666;
   margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 /* LIST */
@@ -709,7 +757,7 @@ body {
   position: relative;
 }
 
-/* RED CIRCLE TICK */
+/* RED CHECK ICON */
 .stylo-drone-list li::before {
   content: "✔";
   position: absolute;
@@ -720,8 +768,7 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-
-  background: #ed2424;
+  background: #ff0000;
   color: #fff;
   font-size: 10px;
 
@@ -730,33 +777,37 @@ body {
   justify-content: center;
 }
 
-/* RESPONSIVE */
+.stylo-drone-section{
+  padding-top: 10px;
+}
+
 @media (max-width: 992px) {
 
   .stylo-drone-box {
     padding: 20px;
   }
 
-  .stylo-drone-right {
-    padding-left: 0;
-    text-align: center;
-    margin-top: 20px;
-  }
-
   .stylo-drone-left {
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 25px;
   }
 
   .stylo-drone-left img {
-    max-width: 320px;
+    max-width: 100%;
   }
+
+  .stylo-drone-right {
+    text-align: left;
+  }
+
+  .stylo-drone-title {
+    font-size: 24px;
+  }
+
 }
 
-@media (max-width: 992px) {
-  .stylo-drone-left img {
-    margin-left: 0;   /* 👈 mobile reset */
-  }
-}
+
 
 
 /* defence css */
@@ -778,6 +829,10 @@ body {
 /* REMOVE GAP */
 .stylo-defence-box .row {
   margin: 0;
+}
+
+.stylo-defence-section{
+  padding-top: 0px;
 }
 
 .stylo-defence-left,
@@ -851,7 +906,6 @@ body {
   border-radius: 12px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 992px) {
 
   .stylo-defence-box {
@@ -859,15 +913,24 @@ body {
   }
 
   .stylo-defence-left {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .stylo-defence-right {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .stylo-defence-right img {
-    max-width: 320px;
+    max-width: 100%;
   }
-}
 
+  .stylo-defence-title {
+    font-size: 24px;
+  }
+
+}
 
 /* SECTION */
 .stylo-solutions {
@@ -1031,14 +1094,14 @@ body {
 } */
 
 .stylo-learn-btn {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
 
-  border: 2px solid #ff0000;
+  border: 2px solid #ed2424;
   border-radius: 50%;
 
-  color: #ff0000;
-  font-size: 26px;
+  color: #ed2424;
+  font-size: 29px;
   font-weight: 500;
 
   display: flex;

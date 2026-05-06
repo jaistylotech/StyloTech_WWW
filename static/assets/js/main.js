@@ -617,17 +617,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // }, 2000);
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const infoCards = document.querySelectorAll(".info-card");
   const slider = document.querySelector(".info-card-slider");
 
+  const prevBtn = document.querySelector(".prev-arrow");
+  const nextBtn = document.querySelector(".next-arrow");
+
   let index = 0;
   let sliderInterval;
 
+  function showCard(newIndex){
+
+      infoCards.forEach(card => {
+          card.classList.remove("active","prev");
+      });
+
+      index = newIndex;
+
+      if(index < 0){
+          index = infoCards.length - 1;
+      }
+
+      if(index >= infoCards.length){
+          index = 0;
+      }
+
+      infoCards[index].classList.add("active");
+  }
+
   function startSlider() {
+
       sliderInterval = setInterval(() => {
 
           infoCards[index].classList.remove("active");
@@ -648,6 +669,14 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(sliderInterval);
   }
 
+  nextBtn.addEventListener("click", () => {
+      showCard(index + 1);
+  });
+
+  prevBtn.addEventListener("click", () => {
+      showCard(index - 1);
+  });
+
   if (infoCards.length > 0) {
       startSlider();
   }
@@ -658,6 +687,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+
+//   const infoCards = document.querySelectorAll(".info-card");
+//   const slider = document.querySelector(".info-card-slider");
+
+//   let index = 0;
+//   let sliderInterval;
+
+//   function startSlider() {
+//       sliderInterval = setInterval(() => {
+
+//           infoCards[index].classList.remove("active");
+//           infoCards[index].classList.add("prev");
+
+//           index = (index + 1) % infoCards.length;
+
+//           infoCards[index].classList.add("active");
+
+//           setTimeout(() => {
+//               infoCards.forEach(card => card.classList.remove("prev"));
+//           }, 500);
+
+//       }, 2000);
+//   }
+
+//   function stopSlider() {
+//       clearInterval(sliderInterval);
+//   }
+
+//   if (infoCards.length > 0) {
+//       startSlider();
+//   }
+
+//   if (slider) {
+//       slider.addEventListener("mouseenter", stopSlider);
+//       slider.addEventListener("mouseleave", startSlider);
+//   }
+
+// });
 
 
 
