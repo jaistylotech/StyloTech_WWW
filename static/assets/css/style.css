@@ -5185,7 +5185,6 @@ img {
   }
 }
 
-
 /* SECTION */
 .stylo-why-section {
   padding: 60px 0;
@@ -5198,69 +5197,35 @@ img {
   font-weight: 700;
 }
 
-/* ITEM */
-.stylo-why-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-align: left;
+/* ROW */
+.stylo-why-section .row {
+  justify-content: center;
+}
+
+/* COLUMN */
+.stylo-why-section .col-lg-4 {
   margin-bottom: 30px;
-}
-
-/* IMAGE (circle already inside image) */
-.stylo-why-img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-/* TEXT */
-.stylo-why-text h5 {
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.stylo-why-text p {
-  font-size: 13px;
-  color: #777;
-  margin: 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-
-  .stylo-why-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-}.stylo-why-img {
-  width: 80px;
-  height: 80px;
 }
 
 /* ITEM */
 .stylo-why-item {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   text-align: left;
-  margin-bottom: 30px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 /* IMAGE */
 .stylo-why-img {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   object-fit: contain;
   flex-shrink: 0;
 
-  /* SHADOW */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   border-radius: 50%;
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
 }
 
 /* TEXT */
@@ -5275,20 +5240,19 @@ img {
   color: #777;
   margin: 0;
   transition: 0.3s;
+  line-height: 1.7;
 }
 
-/* 🔥 HOVER EFFECT */
+/* HOVER */
 .stylo-why-item:hover {
   transform: translateY(-6px);
 }
 
-/* ICON HOVER */
 .stylo-why-item:hover .stylo-why-img {
-  box-shadow: 0 15px 30px rgba(255,0,0,0.25);
   transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(255,0,0,0.25);
 }
 
-/* TEXT HOVER */
 .stylo-why-item:hover h5 {
   color: #ff0000;
 }
@@ -5297,24 +5261,20 @@ img {
   color: #444;
 }
 
-@media (max-width: 768px) {
-  .stylo-why-section .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
+/* MOBILE FIX */
+@media (max-width: 767px) {
+
+  .stylo-why-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
   }
+
+  .stylo-why-text {
+    width: 100%;
+  }
+
 }
-
-
-.stylo-why-section .row {
-  justify-content: center;
-}
-
-
-
-
-
-
-
 
 
 
