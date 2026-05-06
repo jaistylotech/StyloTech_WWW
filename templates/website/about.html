@@ -1,0 +1,331 @@
+{% extends 'website/base.html' %}
+
+{% load static %}
+
+{% block title %}
+StyloTech - About-Page
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="about-hero-section">
+    <div class="about-hero-wrap">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-delay="800">ABOUT US</h1>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="stylo-about-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT -->
+      <div class="col-lg-6">
+        <div class="stylo-about-content">
+          
+          <h2>
+            Empowering Careers <br>
+            in <span>Cyber Security</span>
+          </h2>
+
+          <p>
+            StyloTech Team Is A Forward-Thinking Technology Company Dedicated To Protecting Organizations From Evolving Cyber Threats While Helping Businesses Grow Through Innovative IT Solutions. Founded In 2021, StyloTech Was Previously Known As JPCS Consultancy And Has Rapidly Grown Into A Trusted Name In Technology Services, IT Consulting, Cybersecurity, And Digital Forensics. At StyloTech, We Understand That The Modern Digital World Brings Both Opportunities And Risks. As Organizations Adopt Advanced Technologies, Cloud Infrastructure, And Interconnected Systems, The Threat Landscape Continues To Expand. Our Mission Is To Help Businesses Stay Secure, Resilient, And Prepared For The Challenges Of Tomorrow.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-lg-6">
+        <div class="stylo-about-img">
+          <img src="{% static 'assets/images/about/about_hero_2.png' %}" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="core-values-section" Style="margin-top:-40px;">
+    <div class="container">
+
+        <h2 class="vision-heading">Our Vision</h2>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+                {% comment %} <div class="icon">⭐</div> {% endcomment %}
+                   
+                <div class="icon"><i class="fas fa-star"></i></div>
+                <h3>Innovation</h3>
+                <p>We create advanced cybersecurity solutions.</p>
+            </div>
+
+            <div class="value-card">
+                {% comment %} <div class="icon">🔐</div> {% endcomment %}
+                <div class="icon"><i class="fas fa-lock"></i></div>
+                <h3>Security First</h3>
+                <p>Protecting systems with cutting-edge technology.</p>
+            </div>
+
+            <div class="value-card">
+
+                {% comment %} <div class="icon">⚡</div> {% endcomment %}
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h3>Performance</h3>
+                <p>High-speed and reliable solutions for clients.</p>
+            </div>
+
+            <div class="value-card">
+                {% comment %} <div class="icon">🤝</div> {% endcomment %}
+                <div class="icon"><i class="fas fa-handshake"></i></div>
+                <h3>Trust</h3>
+                <p>Building long-term relationships with clients.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+    <!-- About Vision Section -->
+    {% comment %} <div class="about-vision-section py-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <!-- Left Image -->
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <img src="{% static 'assets/images/about/about_img_1.jpg' %}" class="img-fluid rounded" alt="">
+                </div>
+
+                <!-- Center Content -->
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <div class="vision-box">
+                        <h4 style="font-size:30px; color:#fff;">Our Vision</h4>
+                        <p style="text-align: justify;">Our vision is to create a secure digital ecosystem where
+                            businesses can operate with confidence.By combining advanced technology, cybersecurity
+                            expertise, and innovative thinking, we aim to become a leading global provider of
+                            cybersecurity and IT consulting services.</p>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'assets/images/about/about_img_2.jpg' %}" class="img-fluid rounded" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+
+    <!-- Mission Section -->
+    <section class="stylo-mission-section" style = margin-top:-80px;>
+  <div class="container">
+    <div class="stylo-mission-box">
+
+      <div class="row align-items-center">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-6">
+          <div class="stylo-mission-content">
+
+            <h3>Our Mission</h3>
+
+            <p class="stylo-mission-text">
+              At StyloTech, our mission is to empower individuals and organizations with the knowledge, skills, and tools needed to thrive in the digital world securely
+            </p>
+
+            <ul class="stylo-mission-list">
+              <li>Protect Organizations From Emerging Cyber Threats.</li>
+              <li>Deliver Innovative And Reliable Technology Solutions.</li>
+              <li>Build Skilled Cybersecurity Professionals For The Future.</li>
+              <li>Support Businesses In Achieving Secure Digital Transformation.</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="col-lg-6">
+          <div class="stylo-mission-img">
+            <img src="{% static 'assets/images/about/mission_img3.jpeg' %}" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Expertise Section -->
+
+    <div class="expertise-section " style = "margin-bottom:30px;">
+        <div class="container text-center">
+
+            <h2 class="expertise-title mb-5">Our Expertise</h2>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <div class="expertise-card w-100">
+                        <div class="number">01</div>
+                        <h5>Cybersecurity <br> Solutions</h5>
+                        <p style="text-align: justify;">We provide advanced cybersecurity solutions to protect
+                            organizations from cyber threats, data breaches, and system vulnerabilities. Our experts
+                            conduct vulnerability assessments, penetration testing, threat monitoring, and security
+                            audits to keep your systems secure.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <div class="expertise-card w-100">
+                        <div class="number active">02</div>
+                        <h5>Web & Mobile Application Development</h5>
+                        <p style="text-align: justify;">We design and develop secure, scalable web and mobile applications tailored to business needs. Our development process focuses on performance, security, and user experience.
+We also ensure seamless integration with modern technologies and APIs for future-ready solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <div class="expertise-card w-100">
+                        <div class="number">03</div>
+                        <h5>Secure Code Review / SSDLC Training</h5>
+                        <p style="text-align: justify;">We help development teams build secure software by reviewing
+                            application code for vulnerabilities and implementing Secure Software Development Life Cycle
+                            (SSDLC) practices. Our training programs ensure developers follow industry-standard security
+                            practices.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <div class="expertise-card w-100">
+                        <div class="number active">04</div>
+                        <h5>Phishing<br>Awareness</h5>
+                        <p style="text-align: justify;">Human error is one of the biggest cybersecurity risks. We
+                            conduct phishing simulations and security awareness campaigns to educate employees about
+                            cyber threats, helping organizations reduce the risk of social engineering attacks.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<section class="stylo-why-section" style="margin-bottom: -40px;">
+  <div class="container text-center">
+
+    <h2 class="stylo-why-title">Why Choose StyloTech?</h2>
+
+    <div class="row mt-5">
+
+      <!-- ITEM 1 -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="stylo-why-item">
+
+          <img src="{% static 'assets/images/about/about_icon1.png' %}" class="stylo-why-img" alt="">
+
+          <div class="stylo-why-text">
+            <h5>Expert Faculty</h5>
+            <p>Learn From Industry Experts With Real-World Experiences.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="stylo-why-item">
+
+          <img src="{% static 'assets/images/about/about_icon2.png' %}" class="stylo-why-img" alt="">
+
+          <div class="stylo-why-text">
+            <h5>Industry Recognized</h5>
+            <p>Certification That Add Value To Your Professional Career.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="stylo-why-item">
+
+          <img src="{% static 'assets/images/about/about_icon3.png' %}" class="stylo-why-img" alt="">
+
+          <div class="stylo-why-text">
+            <h5>Career Support</h5>
+            <p>We Help You Build Your Skills And Get Successfully Placed.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
+    <div class="container">
+        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg7.png' %});  padding: 48px 64px;
+                   border-radius: 15px; margin : -100px -18px; margin-top:20px;">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <!-- Cta Left Start -->
+                    <div class="cta-left">
+                        <div class="section-title">
+
+                            <!-- 🔥 BUTTON ADDED HERE -->
+                            <a href="https://wa.me/+918668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank" class="cta-btn">
+                                Connect Us <i class="fas fa-paper-plane"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Cta Left End -->
+                </div>
+                <div class="col-lg-5">
+                    <!-- Cta Right Start -->
+                    <div class="cta-info text-center">
+                        {% comment %} <div class="cta-icon">
+                            <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
+                        </div> {% endcomment %}
+                        <div class="cta-text">
+                            {% comment %} <p>For Official Consultations and Inquiries</p> {% endcomment %}
+                            <h3 class="number" style ="color:#00FFF0"> +91 8668431882</h3>
+                        </div>
+                    </div>
+                    <!-- Cta Right End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

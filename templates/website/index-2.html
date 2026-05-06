@@ -1,0 +1,777 @@
+{% extends 'website/base.html' %}
+
+{% load static %}
+
+{% block title %}
+StyloTech - Home Page
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Hero Start -->
+<div class="section techwix-hero-section-05 custom-hero-small"  >
+    <div class="techwix-hero-wrap" >
+         <video autoplay muted loop class="hero-video">
+            <source src="{% static 'assets/videos/hero.mp4' %}" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-12 col-lg-6 offset-lg-6 hero-shift" >
+                    <!-- Hero Content Start -->
+                    <div class="hero-content" style ="padding-right: 40px;">
+                         {% comment %} <p data-aos="fade-up" data-aos-delay="300"   style="line-height: 40px;">Your Network Becomes Easier To Operate By  <span class="ai-animate">AI</span>
+                        </p> {% endcomment %}
+                        {% comment %} <p data-aos="fade-up" data-aos-delay="300"   style="line-height: 40px;"> Secure For Sure
+                        </p> {% endcomment %}
+                         <p data-aos="fade-up" data-aos-delay="300"   style="line-height: 40px;"> " Cyberspace | Secure For Sure..."
+                        </p>
+                        <h2 class="title" data-aos="fade-up" data-aos-delay="800" style="line-height: 40px;  padding-left:0px;">Take The Next Steps For An<br>
+                            <span class="ai-driven">AI-Driven</span> Enterprise...
+                        </h2>
+                        <p data-aos="fade-up" data-aos-delay="400" style = "line-height: 40px;  font-size: 16px; color:#fff;">Cyber Security & Forensic Investigation Company</p>
+                        <div class="hero-btn " style="display:flex;  color:#fff;"   data-aos="fade-up" data-aos-d0elay="1000">
+                            <a class="btn home_btn "   href="{% url 'about'   %}">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Hero Content End -->
+                </div>
+                 {% comment %} <div class="col-lg-6">
+                    <!-- Hero Image Start -->
+                    <div class="hero-images">
+                        <div class="images">
+                            <img src="{% static 'assets/images/home_page/home_animation.png' %}" alt="">
+                        </div>
+                    </div>
+                    <!-- Hero Image ennd -->
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+
+
+<section class="section techwix-service-section-05 custom-about-section" >
+
+    <div class="container">
+        <div class="row align-items-stretch">
+
+            <!-- LEFT IMAGE -->
+            <div class="col-lg-6 col-md-12 col-12">
+                <div class="left-img">
+                    <img src="{% static 'assets/images/home_page/about_new7.png' %}" alt="image">
+                </div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="col-lg-6 col-md-12 col-12">
+                <div class="right-content w-100">
+
+                    <p class="company">Stylopedia Technology Pvt. Ltd.</p>
+
+                    <h2 class="heading">
+                        Your Trusted Partner In Engineering Innovation
+                    </h2>
+
+                    <p class="desc">
+                        Stylopedia Technology Pvt. Ltd. (StyloTech) is a leading engineering services organization headquartered in Satara; (MAH); India.
+                    </p>
+
+                    <!-- BOTTOM SECTION -->
+                    <div class="bottom-box">
+
+                        <!-- SLIDER CARD -->
+                        <div class="info-card-slider">
+
+
+                           <button class="slider-arrow prev-arrow">
+                             &#10094;
+                            </button>
+
+                            <button class="slider-arrow next-arrow">
+                             &#10095;
+                            </button>
+
+                            <div class="info-card active">
+                                <img src="{% static 'assets/images/bms/drone_img_2.png' %}" alt="">
+                                <!-- <div class="card-top">
+                                      <div class="icon-circle">
+                                       <i class="fas fa-cogs"></i>
+                                      </div>
+                                </div>
+
+                                <h5 class="card-title">
+                                  Advanced Engineering Solutions
+                                </h5> -->
+
+                                <a href="{% url 'R_n_D'%}" class="read-btn">Read More</a>
+
+                            </div>
+
+                              
+                            <div class="info-card">
+                                <!-- <div class="icon-circle">
+                                   <i class="fas fa-microchip"></i>
+                                </div>
+                                <h5 class="card-title">Embedded Systems & IoT Development</h5> -->
+                                <img src="{% static 'assets/images/bms/bms1.jpeg' %}" alt="">
+                                <a href="{% url 'R_n_D'%}" class="read-btn">Read More</a>
+                            </div>
+
+    <!-- CARD 3 -->
+                             <div class="info-card">
+                                <!-- <div class="icon-circle">
+                                  <i class="fas fa-battery-full"></i>
+                                 </div>
+                                 <h5 class="card-title">Smart BMS & Battery Solutions</h5> -->
+                                <img src="{% static 'assets/images/home_page/home_vc_img3.png' %}" alt="">
+                                 <a href="{% url 'R_n_D'%}" class="read-btn">Read More</a>
+                             </div>
+
+  
+                        </div>
+
+                        <!-- RIGHT LIST -->
+                        <div class="feature-list">
+                            <ul>
+                                <li>End-To-End Product Design & Engineering Support</li>
+                                <li>Advanced CAE, CFD & Simulation Expertise</li>
+                                <li>Highly Experienced Engineering Team</li>
+                                <li>Solutions Across Automotive & Aerospace</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- NEW ABOUT / ENGINEERING SECTION START -->
+{% comment %} 
+<div class="section techwix-service-section-05 custom-about-section">
+    <div class="container" style = "margin-top:-50px; margin-bottom:-30px;">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT IMAGE -->
+            <div class="col-lg-6">
+                <div class="about-left-img">
+                    <img src="{% static 'assets/images/home_page/about_new.png' %}" alt="">
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-6">
+
+                <div class="about-right">
+
+                    <span class="small-title">Stylopedia Technology Pvt. Ltd.</span>
+
+                    <h2>Your Trusted Partner In Engineering Innovation</h2>
+
+                    <p class="desc">
+                        COPES Tech India Private Limited (COPES) is a leading engineering services organization headquartered in Bangalore, India.
+                    </p>
+
+                    <!-- 🔥 IMPORTANT: NO INNER ROW -->
+                    <div class="about-bottom">
+
+                        <!-- CARD -->
+                        <div class="slider-card-wrapper">
+
+                            <div class="slider-card active">
+                                <div class="icon">⚙️</div>
+                                <h4>Transparent & Competitive Pricing</h4>
+                                <a href="#" class="read-btn">Read More</a>
+                            </div>
+
+                            <div class="slider-card">
+                                <div class="icon">🚀</div>
+                                <h4>Advanced Engineering Solutions</h4>
+                                <a href="#" class="read-btn">Read More</a>
+                            </div>
+
+                        </div>
+
+                        <!-- LIST -->
+                        <div class="about-list">
+
+                            <h5>Delivering Engineering Excellence for a Smarter Future</h5>
+
+                            <ul>
+                                <li>End-To-End Product Design & Engineering Support</li>
+                                <li>Advanced CAE, CFD & Simulation Expertise</li>
+                                <li>Highly Experienced, Industry-Certified Engineering Team</li>
+                                <li>Solutions Across Automotive, Aerospace & Manufacturing</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div> {% endcomment %}
+
+<!-- About End -->
+
+
+{% comment %} 
+<!-- About Start -->
+<div class="section techwix-about-section-05 ">
+    <div class="container">
+
+        <!-- About Wrap Start -->
+        <div class="about-wrap">
+
+            <div class="section-title text-center" style="padding-top:20px; ">
+                <h3 class="title " style="font-size:18px; font-weight:bold; color : #ed2424;" data-aos="fade-up" data-aos-delay="200">Who we are</h3>
+
+                <p class="title about-text" style="font-size:26px; line-height:1.4;" data-aos="fade-up" data-aos-delay="300">
+                    An AI Partner Excelling In Cyber Security & Forensics,
+Empowering Enterprises With Real-World Innovation.
+                </p>
+            </div>
+
+            <!-- About Content Wrap Start -->
+            <div class="about-content-wrap">
+
+                <div class="row">
+
+                    <!-- Left Side Image -->
+                    <div class="col-lg-6">
+
+                        <div class="about-img-wrap">
+
+                            <div class="about-img about-img-big" style="padding-left:60px;">
+                                <img src="{% static 'assets/images/home_page/home_img_2.jpg' %}" alt="">
+                            </div>
+
+                            <div class="about-img about-img-sm"  >
+                                <img src="{% static 'assets/images/home_page/home_img_4.png' %}" alt="">
+                                <div class="shape-01"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Side Scroll Content -->
+                    <div class="col-lg-6">
+
+                        <div class="about-list-item-wrap scroll-services" style="margin-top:40px;">
+
+                            <!-- Item 1 -->
+                            <div class="about-list-item">
+                                <div class="about-img">
+                                    <img src="{% static 'assets/images/home_page/home_3D_1.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <h3 class="title" style = "color: #ed2424;">Cyber Security & Forensic Services</h3>
+                                    <p style="text-align: justify;">
+                                        Digital forensics encompasses recovering lost data, analyzing mobile devices,
+                                        and restoring damaged hard drives. It also includes imaging storage devices,
+                                        retrieving passwords, examining video evidence, and using field kits for
+                                        collecting digital proof in legal and investigative contexts.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="about-list-item">
+                                <div class="about-img">
+                                    <img src="{% static 'assets/images/home_page/home_3D_2.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <h3 class="title" style = "color: #ed2424;">Web & iOS Mobile Development</h3>
+                                    <p style="text-align: justify;">
+                                        Digital forensics encompasses recovering lost data, analyzing mobile devices,
+                                        and restoring damaged hard drives. It also includes imaging storage devices,
+                                        retrieving passwords, examining video evidence, and using field kits for
+                                        collecting digital proof in legal and investigative contexts.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- Item 3 -->
+                            <div class="about-list-item">
+                                <div class="about-img">
+                                    <img src="{% static 'assets/images/home_page/home_icon_3.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <h3 class="title" style = "color: #ed2424;">Penetration Testing (PT)</h3>
+                                    <p style="text-align: justify;">
+                                        To exploit vulnerabilities and misconfigurations in your organization. PT is
+                                        performed for web & mobile applications, internal & external takeover scenarios,
+                                        and cloud and Internet Of Things (IoT) based systems.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="about-list-item">
+                                <div class="about-img">
+                                    <img src="{% static 'assets/images/home_page/home_icon_4.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <h3 class="title" style = "color: #ed2424;">Secure Code Review / SSDLC Training</h3>
+                                    <p style="text-align: justify;">
+                                        Discover hidden bugs, vulnerabilities, and security gaps within your source
+                                        code. Our expert analysis helps you eliminate risks, strengthen your
+                                        application’s defenses, and ensure your software remains secure against evolving
+                                        cyber threats.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="about-list-item">
+                                <div class="about-img">
+                                    <img src="{% static 'assets/images/home_page/home_icon_5.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <h3 class="title" style = "color: #ed2424;">Phishing Campaigns</h3>
+                                    <p style="text-align: justify;">
+                                        Simulated phishing campaigns test employee awareness through realistic attack
+                                        scenarios-helping organizations identify risks, strengthen security behavior,
+                                        and build a workforce capable of defending against modern cyber threats.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 6 -->
+                            <div class="about-list-item">
+                                <div class="about-img">
+                                    <img src="{% static 'assets/images/home_page/home_icon_6.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <h3 class="title" style = "color: #ed2424;">HR Recruitment Services</h3>
+                                    <p style="text-align: justify;">
+                                        Our goal is to efficiently and strategically fill open positions with the right
+                                        talent. By combining proven sourcing methods with innovative recruitment
+                                        strategies, we create powerful local and national hiring plans that attract top
+                                        candidates and deliver exceptional workforce solutions.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- About Content Wrap End -->
+
+        </div>
+        <!-- About Wrap End -->
+
+    </div>
+</div>
+<!-- About End --> {% endcomment %}
+
+
+
+<div class="section techwix-service-section-05" style =" margin-top: -80px;">
+    <div class="container" >
+
+        <!-- Section Title -->
+        <div class="section-title text-center">
+            <h3 class="sub-title">Crafting Tomorrow’s Solutions with AI Today...</h3>
+            <h3 class="para" style="font-size:18px;">
+                
+                   "Innovating Secure Futures with AI, Cybersecurity & Forensics; 
+                    Empowering Enterprises With Real-World Innovation"
+            </h3>
+        </div>
+
+        <!-- Cards -->
+        <div class="row mt-5">
+
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                <div class="receive-card-new h-100">
+                    <div class="receive-img">
+                        <img src="{% static 'assets/images/home_page/home_receive1.png' %}" alt="">
+                    </div>
+                    <div class="receive-content">
+                        <h3>Customized Business Solutions <br> <span> Transforming Visions into AI Reality</span></h3>
+                        <p>AI-based customized business solutions use Artificial Intelligence and data analytics to create smart systems tailored specifically to a company’s needs. These solutions help businesses automate processes, improve decision-making, reduce costs, and increase efficiency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                <div class="receive-card-new h-100">
+                    <div class="receive-img">
+                        <img src="{% static 'assets/images/home_page/home_receive2.png' %}" alt="">
+                    </div>
+                    <div class="receive-content">
+                        <h3>AI in Cyber Security <br><span> Elevate, Innovate, Dominate; The AI Way</span></h3>
+                        <p>AI in cybersecurity uses Artificial Intelligence (AI) and Machine Learning (ML) to monitor and protect digital systems. It helps organizations detect cyber threats, prevent attacks, and respond to incidents in real time.This makes cybersecurity faster, smarter, and more effective than traditional security methods.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                <div class="receive-card-new h-100">
+                    <div class="receive-img">
+                        <img src="{% static 'assets/images/home_page/home_receive3.png' %}" alt="">
+                    </div>
+                    <div class="receive-content">
+                        <h3 >Drones & UAV’s <br><span> The Compass for Future Generations </span></h3>
+                        
+                        <p>Drones, also known as Unmanned Aerial Vehicles (UAVs), are aircraft that operate
+                                    without a human pilot onboard, controlled remotely or flying autonomously using GPS,
+                                    sensors, and advanced onboard intelligent software systems for navigation and tasks.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+{% comment %} <!-- Service Start -->
+<div class="section techwix-service-section-05" >
+    <div class="container" style="padding-top:30px;">
+        <!-- Service Wrap Start -->
+        <div class="service-wrap section-padding-02" >
+            <div class="section-title text-center">
+                <h3 class="sub-title" data-aos="fade-up" data-aos-delay="200">What You’ll Receive</h3>
+                
+                <h3 class="para" style = "font-size : 18px; " data-aos="fade-zoom" data-aos-delay="300">Digital Forensic Experts Analyze Computer Evidence To Detect Cybercrime And Identify
+                    Security Weaknesses.</h3>
+            </div>
+            <div class="service-content-wrap">
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 d-flex">
+                        <!-- Service Item Start -->
+                        <div class="service-item-04 w-100"  >
+                            <div class="service-img" >
+                                <img src="{% static 'assets/images/home_page/home_icon_7.png' %}" alt="">
+                            </div>
+                            <div class="service-content" >
+                                <h3 class="title" ><a href="#">AI Based customized Business solution</a></h3>
+                                <p style="text-align: justify;">AI-based customized business solutions use Artificial
+                                    Intelligence and data analytics
+                                    to create smart systems tailored specifically to a company’s needs. These solutions
+                                    help businesses automate processes, improve decision-making, reduce costs, and
+                                    increase efficiency.</p>
+                            </div>
+                        </div>
+                        <!-- Service Item End -->
+                    </div>
+                    <div class="col-xl-3 col-sm-6 d-flex">
+                        <!-- Service Item Start -->
+                        <div class="service-item-04 w-100" >
+                            <div class="service-img">
+                                <img src="{% static 'assets/images/home_page/home_icon_8.png' %}" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="title" ><a href="#">AI in Cybersecurity Detect/Prevent/Response </a></h3>
+                                <p style="text-align: justify;">AI in cybersecurity leverages Artificial Intelligence
+                                    and Machine Learning to continuously monitor systems, detect potential threats,
+                                    prevent cyber attacks, and respond to incidents in real time, improving speed,
+                                    accuracy, and overall security effectiveness.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service Item End -->
+                    </div>
+                    <div class="col-xl-3 col-sm-6 d-flex">
+                        <!-- Service Item Start -->
+                        <div class="service-item-04 w-100">
+                            <div class="service-img" >
+                                <img src="{% static 'assets/images/home_page/home_icon_10.png' %}" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="title" ><a href="#">Phishing Campaigns</a></h3>
+                                <p style="text-align: justify;">Simulated phishing campaigns evaluate employee awareness
+                                    using realistic attack scenarios, helping organizations identify vulnerabilities,
+                                    improve security behavior, enhance training effectiveness, and build a workforce
+                                    capable defending against evolving cyber threats.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service Item End -->
+                    </div>
+                    <div class="col-xl-3 col-sm-6 d-flex">
+                        <!-- Service Item Start -->
+                        <div class="service-item-04 w-100" >
+                            <div class="service-img" >
+                                <img src="{% static 'assets/images/home_page/home_icon_11.png' %}" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="title" ><a href="#">Drones & UAV’S</a></h3>
+                                <p style="text-align: justify;">Drones, also known as Unmanned Aerial Vehicles (UAVs), are aircraft that operate
+                                    without a human pilot onboard, controlled remotely or flying autonomously using GPS,
+                                    sensors, and advanced onboard intelligent software systems for navigation and tasks.
+
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service Item End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service Wrap End -->
+    </div>
+</div>
+<!-- Service End --> {% endcomment %}
+
+
+<!-- Solution Start -->
+<!-- Solution Start -->
+<div class="section techwix-solution-section  custom-hero " style = "margin-bottom:30px;" >
+    <div class="container">
+
+        <!-- Solution Wrap Start -->
+        <div class="solution-wrap  ">
+
+            <!-- Section Title -->  
+            <div class="section-title text-center">
+                <h3 class="sub-title" style="margin-top: -100px; font-size: 13px; ;">Artificial Intelligence and the Future of Teaching & Learning; </h3>
+                    <h4 style = "font-size:12px; margin-top:-20px;"> India's First Stimulation based Cyber AI/ML Lab! </h4>
+                     <h4 style = "font-size :10px; "> Designed & Developed By 'StyloTech'<br></h4>
+                {% comment %} <h2 class="title">Solutions To Common AI Problems</h2> {% endcomment %}
+            </div>
+
+            <!-- Solution Content Wrap Start -->
+            <div class="solution-content-wrap" >
+                <div class="row">
+
+                    <!-- Centered Single Video -->
+                    <div class="col-lg-11 mx-auto" style = "margin-top: -40px;"  >
+
+                        <!-- Solution Item Start -->
+                        <div class="solution-item solution-item-big text-center"  >
+
+                           <div class="solution-img">
+                               <video autoplay muted loop playsinline class="bg-video">
+                               <source src="{% static 'assets/videos/myvideo.mp4' %}" type="video/mp4">
+                               </video>
+                             </div>
+
+                             
+
+                            <div class="solution-content">
+                                <h3 class="title" style="font-size: 16px !important;" data-aos="fade-right">India's First Cyber AI/ML Lab, Pune </h3>
+                                
+                                <button class="play-btn" onclick="openVideo()">
+    <i class="fas fa-play"></i>
+</button>
+                            </div>
+
+                        </div>
+                        <!-- Solution Item End -->
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Solution Content Wrap End -->
+
+        </div>
+        <!-- Solution Wrap End -->
+
+    </div>
+</div>
+<!-- Solution End -->
+<!-- Solution End -->
+
+
+
+
+
+
+
+<!-- Testimonial Start  -->
+
+<!-- Testimonial End -->
+<!-- Testimonial End  -->
+
+<!-- Cta Start -->
+<!-- Cta Start -->
+<div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
+    <div class="container">
+        <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg7.png' %});  padding: 48px 64px;
+                   border-radius: 15px; margin : -100px -18px; margin-top:20px;">
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+                    <!-- Cta Left Start -->
+                    <div class="cta-left">
+                        <div class="section-title">
+
+                            <!-- 🔥 BUTTON ADDED HERE -->
+                            <a href="https://wa.me/+918668431882?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20Cybersecurity%20solutions%20and%20Digital%20Forensics%20services.%20Kindly%20assist%20me."  target="_blank" class="cta-btn">
+                                Connect Us <i class="fas fa-paper-plane"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Cta Left End -->
+                </div>
+
+                <div class="col-lg-5">
+                    <!-- Cta Right Start -->
+                    <div class="cta-info text-center">
+                        <div class="cta-icon">
+                            <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
+                        </div>
+                        <div class="cta-text">
+                            <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
+                        </div>
+                    </div>
+                    <!-- Cta Right End -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cta End -->
+
+{% comment %} 
+<div id="videoModal" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+">
+
+    <div style="position:relative; width:70%; max-width:800px;">
+
+        <!-- Close Button -->
+        <span onclick="closeVideo()" style="
+            position:absolute;
+            top:-40px;
+            right:0;
+            color:white;
+            font-size:35px;
+            cursor:pointer;
+        ">&times;</span>
+
+        <!--  YouTube Video -->
+        <iframe id="youtubeVideo" width="100%" height="450"
+            src=""
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+</div> {% endcomment %}
+
+
+
+<div id="videoModal" onclick="closeVideo()" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    z-index:999999;
+    justify-content:center;
+    align-items:center;
+">
+    
+    <!-- 👇 IMPORTANT (stop closing when clicking video) -->
+    <div onclick="event.stopPropagation()" style="position:relative; width:70%; max-width:800px;">
+
+        <!-- Close Button -->
+        <span onclick="closeVideo()" style="
+            position:absolute;
+            top:-40px;
+            right:0;
+            color:white;
+            font-size:35px;
+            cursor:pointer;
+        ">&times;</span>
+
+        <!-- iframe -->
+        <iframe id="youtubeVideo"
+    width="100%"
+    height="450"
+    src=""
+    frameborder="0"
+    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
+
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+window.openVideo = function () {
+    const modal = document.getElementById("videoModal");
+    const youtube = document.getElementById("youtubeVideo");
+
+    if (!modal || !youtube) return;
+
+    modal.style.display = "flex";
+
+    youtube.src = "https://www.youtube-nocookie.com/embed/WSth5RyZEko?autoplay=1&mute=1&controls=1&rel=0&playsinline=1";
+};
+
+window.closeVideo = function () {
+    const youtube = document.getElementById("youtubeVideo");
+    const modal = document.getElementById("videoModal");
+
+    if (youtube) youtube.src = "";
+    if (modal) modal.style.display = "none";
+};
+</script>
+
+{% endblock %}
+
+
+{% endblock %}

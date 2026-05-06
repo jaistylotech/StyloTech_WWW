@@ -1,0 +1,11 @@
+myvenv/
+__pycache__/
+db.sqlite3
+*.pyc
+.env
+.git
+.gitignore
+*.md
+.vscode/
+.DS_Store
+staticfiles/

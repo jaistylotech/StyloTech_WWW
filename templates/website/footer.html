@@ -1,0 +1,231 @@
+
+{% load static %}
+
+<!-- Footer Section Start -->
+<div class="section footer-section footer-section-03"
+     style="background-image: url({% static 'assets/images/bg/footer_bg6.jpg' %}); position: relative; overflow: hidden;">
+       <div class="binary-bg" id="binaryBg"></div>
+
+    <div class="container-fluid" >
+          <div id="tsparticles-footer"></div>
+        <!-- Footer Widget Wrap Start -->
+        <div class="footer-widget-wrap">
+            <div class="row align-items-start justify-content-between">
+
+                <!-- About -->
+                <div class="col-lg-3 col-md-6">
+    <div class="footer-widget-about">
+
+        {% comment %} <div class="footer-logo-box">
+            <a class="footer-logo" href="{% url 'home' %}">
+                <img src="{% static 'assets/images/logo.svg' %}" alt="Logo">
+                <span class="logo-text">StyloTech</span>
+            </a>
+        </div> {% endcomment %}
+
+        <div class="footer-logo-box">
+    <span class="footer-logo">
+        <img src="{% static 'assets/images/about/logo_final.png' %}" alt="Logo">
+         {% comment %} <span class="logo-text">StyloTech</span> {% endcomment %}
+    </span>
+</div>
+
+        <div class="footer-social">
+            <ul class="social">
+                <li>
+                    <a href="https://www.instagram.com/stylotech.official?igsh=b2Q1MGk3empmOGhz" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/stylopedia-technology-pvt-ltd/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/+918668431882?" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/FZrj2hrK4Q" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
+
+                
+                  <li>
+                    <a href="https://www.youtube.com/channel/UCf0onMVETiM536HeLIxPHxg" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+                
+                    <!-- About Links (NEW) -->
+                <div class="col-lg-1 col-md-6 ps-lg-5">
+                     <div class="footer-widget footer-align-left" >
+
+                         <h4 class="footer-widget-title">Links</h4>
+
+                         <div class="widget-link">
+                            <ul class="link">
+                                  <li><a href="{% url 'about' %}">About Us</a></li>
+                                  <li><a href="{% url 'certifications' %}">Certifications </a></li>
+                                  {% comment %} <li><a href="{% url 'training' %}"> Training </a></li> {% endcomment %}
+                                  <li><a href="{% url 'connect'  %}">Connect</a></li>
+                            </ul>
+                         </div>
+
+                    </div>
+                </div>
+                
+
+                <!-- Product -->
+                <div class="col-lg-3 col-md-6 ps-lg-5">
+                    <div class="footer-widget footer-align-left-1">
+
+                        <h4 class="footer-widget-title">Product</h4>
+
+                        <div class="widget-link">
+                            <ul class="link">
+                                <li>
+                                    <a href="{% url 'products' %}">
+                                        Learning Management System (LMS)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'products' %}">
+                                        Attendance Management System (AMS)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'products' %}">
+                                        Club Management System (CMS)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+
+                        <h4 class="footer-widget-title">Connect Us</h4>
+
+                        <div class="widget-info">
+                            <ul>
+
+                                <li>
+                                    <div class="info-icon">
+                                        <i class="flaticon-phone-call"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <span>
+                                            <a href="tel:+91 9665165103">+91 8668431882</a>
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="info-icon">
+                                        <i class="far fa-envelope-open"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <span>
+                                            <a href="mailto:info@stylotech.in">info@stylotech.in</a>
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="info-icon">
+                                        <i class="far fa-envelope-open"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <span>
+                                            <a href="mailto:hr@stylotech.in">hr@stylotech.in</a>
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="info-icon">
+                                        <i class="flaticon-pin"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <span>
+                                            <a href="https://www.google.com/maps?q=18.52458010944136, 73.85534372379898" target="_blank" style ="text-align: justify; font-size: 11px;">
+                                                Office No.505, 5th Floor, Amit Court Apartment, Amit Cafe, Near Shivaji Nagar District Court, Pune – 411005; (MAH); India.
+                                            </a>
+                                        </span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Footer Widget Wrap End -->
+
+    </div>
+
+    <!-- Footer Copyright Start -->
+    <div class="footer-copyright-area">
+        <div class="container">
+            <div class="footer-copyright-wrap">
+                <div class="row align-items-center text-center text-md-start">
+
+                    <!-- Left -->
+                    <div class="col-md-4 mb-2 mb-md-0">
+                        <div class="copyright-text">
+                            <p>© Copyright 2026, Stylopedia Technology Pvt. Ltd.</p>
+                        </div>
+                    </div>
+
+                    <!-- Center -->
+                    <div class="col-md-4 mb-2 mb-md-0 text-center">
+                        <div class="copyright-text">
+                            <p>
+                                <a href="{% url 'privacy' %}">Privacy Policy</a> |
+                                <a href="{% url 'terms' %}">Terms & Conditions</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right -->
+                    <div class="col-md-4 text-md-end">
+                        <div class="copyright-text">
+                            <p>Designed & Developed By : <a href="{% url 'home' %}" style = "color :#ed2424;">StyloTech</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Copyright End -->
+
+</div>
+<!-- Footer Section End -->
+
+<!-- back to top start -->
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+<!-- back to top end -->
