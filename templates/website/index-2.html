@@ -53,7 +53,7 @@ StyloTech - Home Page
 
 
 
-<section class="section techwix-service-section-05 custom-about-section" >
+<section class="section techwix-service-section-05 custom-about-section" style="margin-top:-30px;" >
 
     <div class="container">
         <div class="row align-items-stretch">
@@ -94,7 +94,7 @@ StyloTech - Home Page
                              &#10095;
                             </button>
 
-                            <div class="info-card active">
+                            <div class="info-card ">
                                 <img src="{% static 'assets/images/bms/drone_img_2.png' %}" alt="">
                                 <!-- <div class="card-top">
                                       <div class="icon-circle">
@@ -593,7 +593,7 @@ Empowering Enterprises With Real-World Innovation.
                              
 
                             <div class="solution-content">
-                                <h3 class="title" style="font-size: 16px !important;" data-aos="fade-right">India's First Cyber AI/ML Lab, Pune </h3>
+                                <h3 class="title" style="font-size: 16px !important;" data-aos="fade-right">India's First Cyber AI/ML Lab, Pune. </h3>
                                 
                                 <button class="play-btn" onclick="openVideo()">
     <i class="fas fa-play"></i>
@@ -655,7 +655,7 @@ Empowering Enterprises With Real-World Innovation.
                     <!-- Cta Right Start -->
                     <div class="cta-info text-center">
                         <div class="cta-icon">
-                            <img src="{% static 'assets/images/cta-icon2.png' %}" alt="">
+                            {% comment %} <img src="{% static 'assets/images/cta-icon2.png' %}" alt=""> {% endcomment %}
                         </div>
                         <div class="cta-text">
                             <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
@@ -750,7 +750,7 @@ Empowering Enterprises With Real-World Innovation.
 </div>
 
 {% block extra_js %}
-<script>
+{% comment %} <script>
 window.openVideo = function () {
     const modal = document.getElementById("videoModal");
     const youtube = document.getElementById("youtubeVideo");
@@ -769,7 +769,44 @@ window.closeVideo = function () {
     if (youtube) youtube.src = "";
     if (modal) modal.style.display = "none";
 };
+</script> {% endcomment %}
+
+<script>
+window.openVideo = function () {
+
+    const modal = document.getElementById("videoModal");
+    const youtube = document.getElementById("youtubeVideo");
+
+    // Modal Open
+    if (modal && youtube) {
+
+        modal.style.display = "flex";
+
+        youtube.src =
+        "https://www.youtube-nocookie.com/embed/WSth5RyZEko?autoplay=1&mute=1&controls=1&rel=0&playsinline=1";
+    }
+
+    // New Tab Open
+    setTimeout(() => {
+
+        window.open(
+            "https://www.youtube.com/watch?v=WSth5RyZEko",
+            "_blank"
+        );
+
+    }, 300);
+};
+
+window.closeVideo = function () {
+
+    const youtube = document.getElementById("youtubeVideo");
+    const modal = document.getElementById("videoModal");
+
+    if (youtube) youtube.src = "";
+    if (modal) modal.style.display = "none";
+};
 </script>
+
 
 {% endblock %}
 

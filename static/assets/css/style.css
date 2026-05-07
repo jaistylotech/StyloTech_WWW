@@ -368,6 +368,53 @@ textarea:-ms-input-placeholder {
 
 
 
+
+/* IMAGE */
+
+.stylo-rnd-img img{
+    width:100%;
+    max-width:500px;
+
+    animation: styloFloat 5s ease-in-out infinite;
+
+    transition:0.4s ease;
+}
+
+
+/* FLOAT + ROTATE */
+
+@keyframes styloFloat{
+
+    0%{
+        transform:translateY(0px) rotate(0deg);
+    }
+
+    25%{
+        transform:translateY(-10px) rotate(-2deg);
+    }
+
+    50%{
+        transform:translateY(-18px) rotate(0deg);
+    }
+
+    75%{
+        transform:translateY(-10px) rotate(2deg);
+    }
+
+    100%{
+        transform:translateY(0px) rotate(0deg);
+    }
+}
+
+
+
+/* OPTIONAL HOVER */
+
+.stylo-rnd-img img:hover{
+    transform:scale(1.03);
+}
+
+
 /* =========================
    STYLO CONTACT SECTION
 ========================= */
@@ -852,8 +899,8 @@ textarea:-ms-input-placeholder {
   }
 
   .stylo-office-icon img {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
   }
 
   .stylo-office-content h3 {
@@ -1601,7 +1648,7 @@ body {
 
 /* IMAGE */
 .stylo-s-card img {
-  width: 120px;
+  width: 100px;
   margin-bottom: 15px;
   transition: 0.3s;
 }
@@ -1743,7 +1790,7 @@ body {
   margin: 10px auto 0;
   cursor: pointer;
 } */
-
+/* 
 .stylo-learn-btn {
   width: 40px;
   height: 40px;
@@ -1764,9 +1811,44 @@ body {
   cursor: pointer;
 
   padding: 0;
+} */
+
+.stylo-learn-btn{
+    min-width:40px;
+    min-height:40px;
+
+    width:40px;
+    height:40px;
+
+    border:2px solid #ed2424;
+    border-radius:50%;
+
+    color:#ed2424;
+
+    font-size:24px;
+    font-weight:700;
+    line-height:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:10px auto 0;
+
+    cursor:pointer;
+
+    box-sizing:border-box;
+
+    flex-shrink:0;
+
+    aspect-ratio:1/1;
 }
 
-
+.stylo-learn-btn i,
+.stylo-learn-btn span{
+    position:relative;
+    top:-1px;
+}
 
 
 .stylo-service-front {
@@ -2406,9 +2488,9 @@ body {
 }
 
 /* SWIPER SPACE */
-.styloSwiper {
+/* .styloSwiper {
   padding-bottom: 20px;
-}
+} */
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -2480,7 +2562,7 @@ body {
   font-size: 16px !important;
   margin-bottom: 5px !important;
   font-weight: 600 !important;
-  color: #fff;
+  color: #000;
 }
 
 /* TEXT */
@@ -2488,7 +2570,7 @@ body {
   font-size: 13px !important;
   line-height: 1.4 !important;
   margin: 0 !important;
-  color: #333 !important;
+  color: #000 !important;
 }
 
 /* HOVER */
@@ -2529,12 +2611,12 @@ body {
 /* card white style */
 .stylo-feature-box .stylo-pro-card {
   border: 1px solid rgba(255,255,255,0.5) !important;
-  background: transparent !important;
+  background: #fff !important;
   color: #fff !important;
 }
 
 .stylo-feature-box .stylo-pro-card p {
-  color: #ddd !important;
+  color: #000 !important;
 }
 
 /* arrows */
@@ -2545,7 +2627,7 @@ body {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 /* .styloSwiper .swiper-wrapper {
@@ -4894,6 +4976,25 @@ body {
 }
 
 
+/* CARD BASE */
+
+
+/* ACTIVE CARD */
+.custom-about-section .info-card.active{
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  z-index: 5;
+}
+
+/* ENTER FROM LEFT */
+.custom-about-section .info-card.from-left{
+  transform: translateX(-100%) !important;
+}
+
+/* ENTER FROM RIGHT */
+.custom-about-section .info-card.from-right{
+  transform: translateX(100%) !important;
+}
 
 
 /* ===== ONLY IMAGE + READ MORE FIX ===== */

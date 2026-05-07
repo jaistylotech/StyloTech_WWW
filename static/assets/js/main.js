@@ -617,6 +617,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // }, 2000);
 
+// document.addEventListener("DOMContentLoaded", () => {
+
+//   const infoCards = document.querySelectorAll(".info-card");
+//   const slider = document.querySelector(".info-card-slider");
+
+//   const prevBtn = document.querySelector(".prev-arrow");
+//   const nextBtn = document.querySelector(".next-arrow");
+
+//   let index = 0;
+//   let sliderInterval;
+
+//   function showCard(newIndex){
+
+//       infoCards.forEach(card => {
+//           card.classList.remove("active","prev");
+//       });
+
+//       index = newIndex;
+
+//       if(index < 0){
+//           index = infoCards.length - 1;
+//       }
+
+//       if(index >= infoCards.length){
+//           index = 0;
+//       }
+
+//       infoCards[index].classList.add("active");
+//   }
+
+//   function startSlider() {
+
+//       sliderInterval = setInterval(() => {
+
+//           infoCards[index].classList.remove("active");
+//           infoCards[index].classList.add("prev");
+
+//           index = (index + 1) % infoCards.length;
+
+//           infoCards[index].classList.add("active");
+
+//           setTimeout(() => {
+//               infoCards.forEach(card => card.classList.remove("prev"));
+//           }, 500);
+
+//       }, 2000);
+//   }
+
+//   function stopSlider() {
+//       clearInterval(sliderInterval);
+//   }
+
+//   nextBtn.addEventListener("click", () => {
+//       showCard(index + 1);
+//   });
+
+//   prevBtn.addEventListener("click", () => {
+//       showCard(index - 1);
+//   });
+
+//   if (infoCards.length > 0) {
+//       startSlider();
+//   }
+
+//   if (slider) {
+//       slider.addEventListener("mouseenter", stopSlider);
+//       slider.addEventListener("mouseleave", startSlider);
+//   }
+
+// });
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const infoCards = document.querySelectorAll(".info-card");
@@ -628,65 +704,74 @@ document.addEventListener("DOMContentLoaded", () => {
   let index = 0;
   let sliderInterval;
 
-  function showCard(newIndex){
+  function showCard(newIndex, direction = "next") {
 
       infoCards.forEach(card => {
-          card.classList.remove("active","prev");
+          card.classList.remove(
+              "active",
+              "prev",
+              "next"
+          );
       });
+
+      if(newIndex < 0){
+          newIndex = infoCards.length - 1;
+      }
+
+      if(newIndex >= infoCards.length){
+          newIndex = 0;
+      }
+
+      // OLD CARD ANIMATION
+      if(direction === "next"){
+          infoCards[index].classList.add("prev");
+      } else {
+          infoCards[index].classList.add("next");
+      }
 
       index = newIndex;
 
-      if(index < 0){
-          index = infoCards.length - 1;
-      }
-
-      if(index >= infoCards.length){
-          index = 0;
-      }
-
+      // NEW ACTIVE CARD
       infoCards[index].classList.add("active");
   }
 
-  function startSlider() {
+  // AUTO SLIDER
+  function startSlider(){
 
       sliderInterval = setInterval(() => {
-
-          infoCards[index].classList.remove("active");
-          infoCards[index].classList.add("prev");
-
-          index = (index + 1) % infoCards.length;
-
-          infoCards[index].classList.add("active");
-
-          setTimeout(() => {
-              infoCards.forEach(card => card.classList.remove("prev"));
-          }, 500);
-
+          showCard(index + 1, "next");
       }, 2000);
   }
 
-  function stopSlider() {
+  function stopSlider(){
       clearInterval(sliderInterval);
   }
 
+  // BUTTON EVENTS
   nextBtn.addEventListener("click", () => {
-      showCard(index + 1);
+      showCard(index + 1, "next");
   });
 
   prevBtn.addEventListener("click", () => {
-      showCard(index - 1);
+      showCard(index - 1, "prev");
   });
 
-  if (infoCards.length > 0) {
-      startSlider();
-  }
+  // START
+  infoCards[index].classList.add("active");
+  startSlider();
 
-  if (slider) {
+  // PAUSE ON HOVER
+  if(slider){
       slider.addEventListener("mouseenter", stopSlider);
       slider.addEventListener("mouseleave", startSlider);
   }
 
 });
+
+
+
+
+
 
 // document.addEventListener("DOMContentLoaded", () => {
 

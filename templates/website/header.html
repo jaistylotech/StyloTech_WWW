@@ -45,12 +45,12 @@
                                 <a href="{% url 'training' %}">Trainings</a>
                             </li> {% endcomment %}
 
-                             <li class="{% if request.resolver_match.url_name == 'r_n_d' %} active-menu {% endif %}">
+                             <li class="{% if request.resolver_match.url_name == 'R_n_D' %} active-menu {% endif %}">
                                 <a href="{% url 'R_n_D' %}">R&D</a>
                              </li>
                                  
 
-                            <li class="{% if request.resolver_match.url_name == 'contact' %} active-menu {% endif %}">
+                            <li class="{% if request.resolver_match.url_name == 'connect' %} active-menu {% endif %}">
                               <a href="{% url 'connect' %}">Connect Us</a>
                             </li>
                             
