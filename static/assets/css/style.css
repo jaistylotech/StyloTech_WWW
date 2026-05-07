@@ -366,6 +366,300 @@ textarea:-ms-input-placeholder {
 
 /*--css add by me --*/
 
+
+
+/* BREADCRUMB */
+.privacy-breadcrumb{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:15px;
+    font-weight:500;
+}
+
+.privacy-breadcrumb a{
+    color:#ed2424;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.privacy-breadcrumb a:hover{
+    text-decoration:underline;
+}
+
+.privacy-breadcrumb span{
+    color:#666;
+    margin:0 4px;
+}
+
+
+
+
+/* =========================================
+AI VIDEO SECTION
+========================================= */
+
+.ai-video-section{
+    width:100%;
+    padding:10px 0 40px;
+    background:#fff;
+    overflow:hidden;
+}
+
+/* REMOVE TOP GAP SAFELY */
+
+.ai-video-section{
+    padding-top:10px !important;
+    margin-top:-80px !important;
+}
+
+.ai-video-heading{
+    margin-top:0 !important;
+    margin-bottom:20px !important;
+    position:relative;
+    z-index:5;
+}
+
+
+
+/* .ai-video-section{
+    padding-top:-50px !important;
+} */
+
+
+/* HEADING */
+
+.ai-video-heading{
+    margin-bottom:30px;
+}
+
+.ai-video-subtitle{
+    font-size:13px;
+    color:#ed2424;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.ai-video-title{
+    font-size:18px;
+    color:#111;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.ai-video-dev{
+    font-size:13px;
+    color:#444;
+    font-weight:600;
+}
+
+
+/* WRAPPER */
+
+.ai-video-wrapper{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* CARD */
+
+.ai-video-card{
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    height:470px;
+    /* border-radius:18px; */
+    border-radius: 2rem;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,0.12);
+}
+
+
+/* VIDEO */
+
+.ai-video-box{
+    width:100%;
+    height:100%;
+}
+
+.ai-video-bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* OVERLAY */
+
+.ai-video-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
+}
+
+
+/* CONTENT */
+
+.ai-video-content{
+    position:absolute;
+    bottom:18px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    width:100%;
+    padding:0 20px;
+}
+
+
+/* TEXT */
+
+.ai-video-main-text{
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+
+/* PLAY BUTTON */
+
+.ai-video-play-btn{
+    width:35px;
+    height:35px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#fff;
+    color:#ed2424;
+
+    font-size:10px;   /* icon chhota */
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:0.4s ease;
+
+    padding:0;
+    line-height:1;
+}
+
+
+/* ICON CENTER */
+
+.ai-video-play-btn i{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:2px;   /* play icon visually center */
+}
+
+
+/* HOVER */
+
+.ai-video-play-btn:hover{
+    /* transform:scale(1.08); */
+    background:#ed2424;
+    color:#000;
+}
+
+
+/* TABLET */
+
+@media(max-width:991px){
+
+    .ai-video-card{
+        height:380px;
+        border-radius:22px;
+    }
+
+    .ai-video-main-text{
+        font-size:15px;
+    }
+
+    .ai-video-play-btn{
+        width:38px;
+        height:38px;
+        font-size:12px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:767px){
+
+    .ai-video-section{
+        padding:50px 0 30px;
+    }
+
+    .ai-video-card{
+        height:300px;
+        border-radius:18px;
+    }
+
+    .ai-video-content{
+        bottom:12px;
+    }
+
+    .ai-video-main-text{
+        font-size:13px;
+        line-height:1.4;
+        margin-bottom:8px;
+    }
+
+    .ai-video-subtitle{
+        font-size:11px;
+        letter-spacing:1px;
+    }
+
+    .ai-video-title{
+        font-size:15px;
+    }
+
+    .ai-video-dev{
+        font-size:11px;
+    }
+
+    .ai-video-play-btn{
+        width:34px;
+        height:34px;
+        font-size:10px;
+    }
+
+    .ai-video-play-btn i{
+        margin-left:1px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
 /* DESKTOP */
 .custom-about-section{
     margin-top: -30px !important;
@@ -383,50 +677,40 @@ textarea:-ms-input-placeholder {
 
 
 /* IMAGE */
-
 .stylo-rnd-img img{
     width:100%;
     max-width:500px;
 
-    animation: styloFloat 5s ease-in-out infinite;
+    animation: styloZoom 5s ease-in-out infinite;
 
     transition:0.4s ease;
 }
 
 
-/* FLOAT + ROTATE */
+/* STRONG ZOOM EFFECT */
 
-@keyframes styloFloat{
+@keyframes styloZoom{
 
     0%{
-        transform:translateY(0px) rotate(0deg);
-    }
-
-    25%{
-        transform:translateY(-10px) rotate(-2deg);
+        transform:scale(1);
     }
 
     50%{
-        transform:translateY(-18px) rotate(0deg);
-    }
-
-    75%{
-        transform:translateY(-10px) rotate(2deg);
+        transform:scale(1.18);
     }
 
     100%{
-        transform:translateY(0px) rotate(0deg);
+        transform:scale(1);
     }
 }
 
 
 
-/* OPTIONAL HOVER */
+/* HOVER EFFECT */
 
 .stylo-rnd-img img:hover{
-    transform:scale(1.03);
+    transform:scale(1.25);
 }
-
 
 /* =========================
    STYLO CONTACT SECTION
@@ -443,7 +727,7 @@ textarea:-ms-input-placeholder {
   border: 1px solid #eee;
   border-radius: 24px;
   padding: 30px;
-  background: #fff;
+  background: #012e63;
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
@@ -480,16 +764,17 @@ textarea:-ms-input-placeholder {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .stylo-contact-title span {
-  color: #ff0000;
+  color: #ed2424;
 }
 
 /* DESC */
 .stylo-contact-desc {
   font-size: 16px;
-  color: #666;
+  color: #fffcfc;
   line-height: 1.8;
   max-width: 320px;
   margin-bottom: 30px;
@@ -559,7 +844,7 @@ textarea:-ms-input-placeholder {
   border-radius: 50%;
 
   background: rgba(255,0,0,0.1);
-  color: #ff0000;
+  color: #ed2424;
 
   display: flex;
   align-items: center;
@@ -758,6 +1043,101 @@ textarea:-ms-input-placeholder {
 
 
 
+/* SOCIAL ICONS */
+.stylo-social-icons{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:28px;
+  flex-wrap:wrap;
+}
+
+/* SMALL ICON BOX */
+.stylo-social-btn{
+  width:35px;
+  height:35px;
+
+  border-radius:10px;
+  background:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+
+  font-size:17px;
+  color:#ed2424 !important;
+
+  border:1px solid #f3f3f3;
+
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+
+  transition:all 0.3s ease;
+}
+
+/* FORCE RED */
+.stylo-social-btn.whatsapp,
+.stylo-social-btn.discord,
+.stylo-social-btn.instagram,
+.stylo-social-btn.linkedin,
+.stylo-social-btn.youtube{
+  color:#ed2424 !important;
+}
+
+/* HOVER */
+.stylo-social-btn:hover{
+  background:#ed2424;
+  color:#fff !important;
+
+  transform:translateY(-4px);
+
+  box-shadow:0 10px 22px rgba(237,36,36,0.20);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .stylo-social-icons{
+    justify-content:center;
+  }
+
+  .stylo-social-btn{
+    width:38px;
+    height:38px;
+    font-size:15px;
+  }
+
+}
+
+
+/* LEFT SIDE FULL CENTER */
+.stylo-contact-content{
+  height:420px !important;
+
+  display:flex !important;
+  flex-direction:column !important;
+
+  justify-content:center !important;
+  align-items:center !important;
+
+  text-align:center !important;
+
+  padding-right:0 !important;
+}
+
+/* DESCRIPTION CENTER */
+.stylo-contact-desc{
+  max-width:360px !important;
+  margin:0 auto 28px !important;
+}
+
+/* ICONS CENTER */
+.stylo-social-icons{
+  justify-content:center !important;
+  margin-top: -10px !important;
+}
+
 
 /* =========================
    OFFICE SECTION
@@ -954,6 +1334,32 @@ textarea:-ms-input-placeholder {
 }
 
 
+/* DETAILS */
+.stylo-office-content p{
+  font-size:14px !important;
+  color:#555 !important;
+
+  line-height:1.8 !important;
+  margin-bottom:10px !important;
+
+  display:flex !important;
+  align-items:flex-start !important;
+  gap:12px !important;
+
+  word-break:break-word !important;
+}
+
+/* ICONS */
+.stylo-office-content p i{
+  color:#ed2424 !important;
+
+  width:18px !important;
+  min-width:18px !important;
+
+  margin-top:6px !important;
+
+  flex-shrink:0 !important;
+}
 
 
 
@@ -5060,6 +5466,7 @@ body {
   max-width: 100% !important;
   max-height: 140px !important;
   object-fit: contain !important;
+  border-radius: 12px;
 }
 
 
