@@ -2,9 +2,9 @@
 FROM python:3.12.5-slim
 
 # Set environment variables
-# ENV PYTHONDONTWRITEBYTECODE=1
-# ENV PYTHONUNBUFFERED=1
-# ENV DJANGO_SETTINGS_MODULE=stylotech_site.settings
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV DJANGO_SETTINGS_MODULE=stylotech_site.settings
 
 # Set the working directory
 WORKDIR /app
