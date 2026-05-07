@@ -366,6 +366,19 @@ textarea:-ms-input-placeholder {
 
 /*--css add by me --*/
 
+/* DESKTOP */
+.custom-about-section{
+    margin-top: -30px !important;
+}
+
+/* TABLET + MOBILE */
+@media (max-width: 991px){
+
+    .custom-about-section{
+        margin-top: -70px !important;
+    }
+}
+
 
 
 
