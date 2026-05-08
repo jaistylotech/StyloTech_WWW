@@ -708,9 +708,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       infoCards.forEach(card => {
           card.classList.remove(
-              "active",
-              "prev",
-              "next"
+               "active",
+               "prev",
+              "from-left",
+              "from-right"
           );
       });
 
@@ -726,7 +727,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if(direction === "next"){
           infoCards[index].classList.add("prev");
       } else {
-          infoCards[index].classList.add("next");
+          infoCards[index].classList.add("from-right");
       }
 
       index = newIndex;

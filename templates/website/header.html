@@ -98,9 +98,23 @@
         <div class="offcanvas offcanvas-start" id="offcanvasExample">
             <div class="offcanvas-header">
                 <!-- Offcanvas Logo Start -->
+                {% comment %} <div class="offcanvas-logo">
+                    <a href="{% url 'home' %}"><img src="{% static 'assets/images/about/logo_final.png' %} " alt=""></a>
+                </div> {% endcomment %}
+               
+
                 <div class="offcanvas-logo">
-                    <a href="{% url 'home' %}"><img src="{% static 'assets/images/about/final_logo 1.png' %} " alt=""></a>
+
+                        <a href="{% url 'home' %}" class="mobile-logo-wrap">
+
+                         <img src="{% static 'assets/images/logo.svg' %}" alt="">
+
+                         <span>StyloTech</span>
+
+                        </a>
+
                 </div>
+
                 <!-- Offcanvas Logo End -->
                 <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i class="flaticon-close"></i></button>
             </div>

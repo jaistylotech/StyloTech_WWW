@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     "stylotech.in",
     "www.stylotech.in",
 ]
+# ALLOWED_HOSTS = ["*"]
 
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
