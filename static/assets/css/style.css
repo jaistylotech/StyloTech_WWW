@@ -5501,11 +5501,11 @@ body {
       padding: 4px 10px !important;
   }
 
-  .custom-about-section .slider-arrow{
+  /* .custom-about-section .slider-arrow{
       width: 28px !important;
       height: 28px !important;
       font-size: 14px !important;
-  }
+  } */
 
 }
 
@@ -5539,7 +5539,7 @@ body {
   }
 
   .custom-about-section .info-card img{
-      max-height: 100px !important;
+      max-height: 112px !important;
       width: auto !important;
   }
 
