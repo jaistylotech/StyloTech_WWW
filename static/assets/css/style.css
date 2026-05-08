@@ -4191,7 +4191,8 @@ body {
 /* Hero Wrap */
 .connect-hero-wrap {
   position: relative !important;
-  background-image: url("../images/contact/connect_bg 1.png") !important; /* 👉 apni image path change karo */
+  background-image: url("/static/assets/images/Contact/connect_bg%201.png") !important;
+  /*background-image: url("static/assets/images/Contact/connect_bg%201.png") !important; /* 👉 apni image path change karo */
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
