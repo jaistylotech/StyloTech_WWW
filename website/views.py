@@ -33,8 +33,8 @@ def products(request):
 
 
 
-def certifications (request):
-    return render(request,'website/Certifications.html')
+# def certifications (request):
+#     return render(request,'website/Certifications.html')
 
 
 def training(request):

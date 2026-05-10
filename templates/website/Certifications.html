@@ -1,4 +1,4 @@
-{% extends 'website/base.html' %}
+{% comment %} {% extends 'website/base.html' %}
 
 {% load static %}
 
@@ -131,9 +131,9 @@ StyloTech - Certification Page
                         <div class="cta-icon">
                             {% comment %} <img src="{% static 'assets/images/cta-icon2.png' %}" alt=""> {% endcomment %}
                         </div>
-                        <div class="cta-text">
+                        {% comment %} <div class="cta-text"> {% endcomment %}
                             {% comment %} <p>For Official Consultations and Inquiries</p> {% endcomment %}
-                            <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
+                            {% comment %} <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
                         </div>
                     </div>
                     <!-- Cta Right End -->
@@ -141,9 +141,9 @@ StyloTech - Certification Page
             </div>
         </div>
     </div>
-</div>
+</div> {% endcomment %}
 
 <!-- Cta End -->
 
 
-{% endblock %}
+{% endblock %} {% endcomment %}
