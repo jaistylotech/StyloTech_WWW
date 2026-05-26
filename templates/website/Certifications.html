@@ -1,9 +1,13 @@
-{% comment %} {% extends 'website/base.html' %}
+ {% comment %} {% extends 'website/base.html' %}
 
 {% load static %}
 
 {% block title %}
 StyloTech - Certification Page
+{% endblock %}
+
+{% block meta_description %}
+View StyloTech cybersecurity certifications including CEH, OSCP, CHFI, Security+, and secure software development expertise.
 {% endblock %}
 
 {% block content %}
@@ -105,6 +109,8 @@ StyloTech - Certification Page
 
 </div>
 
+
+<!-- Cta Start -->
 <div class="section techwix-cta-section-04 techwix-cta-section-06 techwix-cta-section-07">
     <div class="container">
         <div class="cta-wrap" style="background-image: url({% static 'assets/images/bg/cta-bg7.png' %});   padding: 48px 64px;
@@ -129,11 +135,11 @@ StyloTech - Certification Page
                     <!-- Cta Right Start -->
                     <div class="cta-info text-center">
                         <div class="cta-icon">
-                            {% comment %} <img src="{% static 'assets/images/cta-icon2.png' %}" alt=""> {% endcomment %}
+                          
                         </div>
-                        {% comment %} <div class="cta-text"> {% endcomment %}
-                            {% comment %} <p>For Official Consultations and Inquiries</p> {% endcomment %}
-                            {% comment %} <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
+                        <div class="cta-text">
+                            
+                            <h3 class="number" style ="color:#00FFF0">+91 8668431882</h3>
                         </div>
                     </div>
                     <!-- Cta Right End -->
@@ -141,9 +147,9 @@ StyloTech - Certification Page
             </div>
         </div>
     </div>
-</div> {% endcomment %}
+</div>
 
 <!-- Cta End -->
 
 
-{% endblock %} {% endcomment %}
+{% endblock %}  {% endcomment %}

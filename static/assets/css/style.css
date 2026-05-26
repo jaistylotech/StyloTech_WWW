@@ -370,6 +370,8 @@ textarea:-ms-input-placeholder {
 
 
 
+
+
 /* BREADCRUMB */
 .privacy-breadcrumb{
     text-align:center;
@@ -1540,6 +1542,7 @@ body {
 .stylo-rnd-hero {
   padding: 76px 20px;   /* 👈 compact spacing */
   background: #fff;
+  margin-top: 23px;
 }
 
 /* CONTAINER WIDTH (FIX GAP) */
@@ -3353,6 +3356,7 @@ body {
 
 .custom-hero-small .techwix-hero-wrap {
   padding: 100px 0 !important;
+  margin-top: 24px !important;
 }
 
 /* Title size control */
